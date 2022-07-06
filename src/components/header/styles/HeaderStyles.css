@@ -1,4 +1,30 @@
 .menuIcon {
     opacity: 0.6;
     color: black;
+    
+}
+
+.header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerItems {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.searchBox {
+    height: 35px;
+    width: 30vw;
+    font-size: 20px;
+}
+
+.searchIcon {
+    height: 50px;
+    padding: 7px 20px;
+    border: 1px solid grey;
+    background-color: #f2f8fa;
 }
