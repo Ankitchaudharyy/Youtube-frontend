@@ -1,0 +1,21 @@
+.menuIcon {
+    opacity: 0.6;
+    color: black;
+    cursor: pointer;
+}
+
+.logo {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    cursor: pointer;
+}
+
+@media only screen and (max-width : 600px) {
+    img {
+        display: none;
+    }
+}

@@ -1,0 +1,38 @@
+.searchBox {
+    height: 35px;
+    font-size: 20px;
+}
+
+.searchIcon {
+    height: 50px;
+    padding: 7px 20px;
+    border: 1px solid grey;
+    background-color: #f2f8fa;
+    cursor: pointer;
+}
+
+.micIcon {
+    background-color: #f2f8fa;
+    border: 1px solid #f2f8fa;
+    padding: 2px;
+    margin: 0px 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.searchField {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (min-width : 850px) {
+    .searchBox {
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .searchBox {
+        width: 150px;
+    }
+}
