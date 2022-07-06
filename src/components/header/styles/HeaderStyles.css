@@ -1,7 +1,6 @@
 .menuIcon {
     opacity: 0.6;
     color: black;
-    
 }
 
 .header {
@@ -14,6 +13,7 @@
     height: 50px;
     display: flex;
     align-items: center;
+    width: 20vw;
 }
 
 .searchBox {
@@ -35,4 +35,20 @@
     padding: 2px;
     margin: 0px 5px;
     border-radius: 50%;
+}
+
+.searchField {
+    display: flex;
+    align-items: center;
+    width: 40vw;
+}
+
+.iconMenu {
+    width: 10vw;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin: 0 3px;
 }
