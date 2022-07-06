@@ -4,7 +4,7 @@ import Logo from './logo/Logo';
 import SearchField from './searchField/SearchField';
 import IconMenu from './iconMenu/IconMenu';
 
-function Header() {
+const Header = React.memo(() => {
     return (
         <div className='header'>
             <Logo />
@@ -12,6 +12,6 @@ function Header() {
             <IconMenu />
         </div>
     )
-}
+});
 
 export default Header
