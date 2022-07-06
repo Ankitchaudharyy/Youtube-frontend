@@ -28,3 +28,11 @@
     border: 1px solid grey;
     background-color: #f2f8fa;
 }
+
+.micIcon {
+    background-color: #f2f8fa;
+    border: 1px solid #f2f8fa;
+    padding: 2px;
+    margin: 0px 5px;
+    border-radius: 50%;
+}
