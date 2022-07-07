@@ -1,9 +1,14 @@
 import React from 'react'
+import SideMenuExpanded from './sideMenuExpanded/SideMenuExpanded';
 
 function SideMenu({ showMenu }) {
     return (
         <>
-            {showMenu ? <div>SideMenu</div> : <div> df </div>} 
+            {showMenu ?
+                <SideMenuExpanded />
+                :
+                <div> df </div>
+            }
         </>
     );
 

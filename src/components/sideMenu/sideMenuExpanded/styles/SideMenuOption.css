@@ -1,0 +1,12 @@
+.menuOption { 
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    margin: 0 5px;
+}
+
+.icon {
+    margin-left: 10px;
+    margin-right: 25px;
+}
