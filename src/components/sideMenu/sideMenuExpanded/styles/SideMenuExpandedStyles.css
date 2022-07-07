@@ -1,8 +1,10 @@
 .sideMenu {
     display: flex;
     flex-direction: column;
-    width: 200px;
-    overflow-y: auto;
+    width: 210px;
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    height: 100vh;
 }
 
 h4 {
@@ -18,4 +20,9 @@ h4 {
 
 span {
     color: gray;
+}
+
+hr {
+    width: 190px;
+    color: lightgray;
 }
