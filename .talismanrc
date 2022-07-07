@@ -2,5 +2,5 @@ fileignoreconfig:
 - filename: package-lock.json
   checksum: 5df411385b7ec8fa9c67081b038db5c64cf01f92b6280118879103987b6d4200
 - filename: src/components/sideMenu/sideMenuExpanded/SideMenuExpanded.js
-  checksum: 3cdcf8d5a23a1e1b182528f407569459cc746622022e954d74ab573812a613a4
+  checksum: a647d05c63d1c530588ced9d8dc4860857197758954f26aeeb5d345e756f7ad7
 version: ""

@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { homeOptions, activityOptions, subscriptionOptions, moreOptions, settingOptions } from './menuOptions';
 import SideMenuOption from './SideMenuOption';
 import './styles/SideMenuExpandedStyles.css';
 import CopyrightOutlinedIcon from '@mui/icons-material/CopyrightOutlined';
 
-function mapToJSX(options) {
-    return options.map((option, index) => {
-        return <SideMenuOption key={index} text={option[0]} Icon={option[1]} OutlinedIcon={option[2]} />
-    })
-}
-
 function SideMenuExpanded() {
+
+    const [selected, setSelected] = useState("Home");
+    console.log(selected)
+
+    function mapToJSX(options) {
+        return options.map((option, index) => {
+            return <SideMenuOption key={index} text={option[0]} Icon={option[1]} OutlinedIcon={option[2]} selected={selected} setSelected={setSelected}/>
+        })
+    }
+
     return (
         <div className='sideMenu'>
             {mapToJSX(homeOptions)}
