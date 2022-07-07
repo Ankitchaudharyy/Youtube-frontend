@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SideMenuContext = React.createContext({
+const ShowMenuContext = React.createContext({
     showMenu: true,
     setShowMenu: () => { }
 });
@@ -10,4 +10,4 @@ const SelectedOptionContext = React.createContext({
     setSelected: () => { }
 })
 
-export { SideMenuContext, SelectedOptionContext} ;
+export { ShowMenuContext, SelectedOptionContext} ;

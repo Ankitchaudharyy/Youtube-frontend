@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import './styles/LogoStyles.css';
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import Tooltip from '@mui/material/Tooltip';
-import { SideMenuContext } from '../../../context/SideMenuContext';
+import { ShowMenuContext } from '../../../context/SideMenuContext';
 
 function Logo() {
-    const { showMenu, setShowMenu } = useContext(SideMenuContext)
+    const { showMenu, setShowMenu } = useContext(ShowMenuContext)
 
     return (
         <div className='logo'>

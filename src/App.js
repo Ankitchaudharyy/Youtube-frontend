@@ -1,7 +1,7 @@
 import Header from './components/header/Header';
 import './App.css';
 import { useState } from 'react';
-import { SideMenuContext } from './context/SideMenuContext';
+import { ShowMenuContext } from './context/SideMenuContext';
 import SideMenu from './components/sideMenu/SideMenu';
 
 function App() {
@@ -9,9 +9,9 @@ function App() {
 
   return (
     <div>
-      <SideMenuContext.Provider value={{ showMenu, setShowMenu }} >
+      <ShowMenuContext.Provider value={{ showMenu, setShowMenu }} >
         <Header />
-      </SideMenuContext.Provider>
+      </ShowMenuContext.Provider>
       <SideMenu showMenu={showMenu} />
     </div>
   );

@@ -1,7 +1,7 @@
 .menuOption { 
     display: flex;
     align-items: center;
-    width: 210px;
+    width: 200px;
     height: 40px;
     margin: 0 5px;
     cursor: pointer;
