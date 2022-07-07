@@ -1,5 +1,5 @@
 import React from 'react'
-import { homeOptions, activityOptions, subscriptionOptions } from './menuOptions';
+import { homeOptions, activityOptions, subscriptionOptions, moreOptions, settingOptions } from './menuOptions';
 import SideMenuOption from './SideMenuOption';
 import './styles/SideMenuExpandedStyles.css';
 
@@ -22,6 +22,12 @@ function SideMenuExpanded() {
             {mapToJSX(subscriptionOptions)}
             <div> <hr /> </div>
 
+            <h4> MORE FROM YOUTUBE </h4>
+            {mapToJSX(moreOptions)}
+            <div> <hr /> </div>
+
+            {mapToJSX(settingOptions)}
+            <div> <hr /> </div>
         </div>
     );
 }
