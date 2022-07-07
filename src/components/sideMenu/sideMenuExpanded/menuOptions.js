@@ -14,6 +14,14 @@ import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined';
+import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
+import LocalMoviesOutlinedIcon from '@mui/icons-material/LocalMoviesOutlined';
+import LibraryMusicOutlinedIcon from '@mui/icons-material/LibraryMusicOutlined';
 
 const homeOptions = [
     ['Home', <HomeIcon />, <HomeOutlinedIcon />],
@@ -29,7 +37,15 @@ const activityOptions = [
     ['Liked Videos', <ThumbUpIcon />, <ThumbUpOutlinedIcon />]
 ]
 
+const subscriptionOptions = [
+    ['Music', <LibraryMusicIcon />, <LibraryMusicOutlinedIcon />],
+    ['Sports', <EmojiEventsIcon />, <EmojiEventsOutlinedIcon />],
+    ['Gaming', <SportsEsportsIcon />, <SportsEsportsOutlinedIcon />],
+    ['Movies', <LocalMoviesIcon />, <LocalMoviesOutlinedIcon />]
+]
+
 export {
     homeOptions,
-    activityOptions
+    activityOptions,
+    subscriptionOptions
 }

@@ -1,24 +1,27 @@
 import React from 'react'
-import { homeOptions, activityOptions } from './menuOptions';
+import { homeOptions, activityOptions, subscriptionOptions } from './menuOptions';
 import SideMenuOption from './SideMenuOption';
 import './styles/SideMenuExpandedStyles.css';
+
+function mapToJSX(options) {
+    return options.map((option, index) => {
+        return <SideMenuOption key={index} text={option[0]} Icon={option[1]} OutlinedIcon={option[2]} />
+    })
+}
 
 function SideMenuExpanded() {
     return (
         <div className='sideMenu'>
-            {
-                homeOptions.map((option, index) => {
-                    return <SideMenuOption key={index} text={option[0]} Icon={option[1]} OutlinedIcon={option[2]} />
-                })
-            }
-            <div>
-                <hr />
-            </div>
-            {
-                activityOptions.map((option, index) => {
-                    return <SideMenuOption key={index} text={option[0]} Icon={option[1]} OutlinedIcon={option[2]} />
-                })
-            }
+            {mapToJSX(homeOptions)}
+            <div> <hr /> </div>
+
+            {mapToJSX(activityOptions)}
+            <div> <hr /> </div>
+
+            <h4 > SUBSCRIPTIONS </h4>
+            {mapToJSX(subscriptionOptions)}
+            <div> <hr /> </div>
+
         </div>
     );
 }
