@@ -1,6 +1,12 @@
 .collapsedMenuOption {
-    width: 55px;
+    width: 60px;
     font-size: 10px;
     text-align: center;
     padding: 15px 0;
+    cursor: pointer;
 }
+
+.collapsedMenuOption:hover {
+    background-color: rgb(211, 211, 211, 0.4);
+}
+

@@ -7,7 +7,7 @@ function CollapsedSideMenuOption({ text, Icon, OutlinedIcon }) {
     const {selected, setSelected} = useContext(SelectedOptionContext);
 
     return (
-        <div className="collapsedMenuOption">
+        <div className="collapsedMenuOption" onClick={() => setSelected(text)}>
             <div>
                 {selected === text ? Icon : OutlinedIcon}
             </div>
