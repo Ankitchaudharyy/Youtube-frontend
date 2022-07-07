@@ -2,4 +2,7 @@
     height: 50px;
     display: flex;
     justify-content: space-between;
+    top: 0px;
+    position: sticky;
+    background-color: white;
 }

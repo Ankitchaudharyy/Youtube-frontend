@@ -4,7 +4,7 @@ import './styles/SideMenuOption.css';
 function SideMenuOption({ text, Icon, OutlinedIcon }) {
   return (
     <div className='menuOption'>
-      <div className='icon'>
+      <div className='sideIcon'>
         {OutlinedIcon}
       </div>
       <div className='text'>      
