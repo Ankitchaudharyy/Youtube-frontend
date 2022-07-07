@@ -1,4 +1,5 @@
 import React from 'react'
+import CollapsedSideMenu from './collapsedSideMenu/CollapsedSideMenu';
 import ExpandedSideMenu from './expandedSideMenu/ExpandedSideMenu';
 
 function SideMenu({ showMenu }) {
@@ -7,7 +8,7 @@ function SideMenu({ showMenu }) {
             {showMenu ?
                 <ExpandedSideMenu />
                 :
-                <div> df </div>
+                <CollapsedSideMenu />
             }
         </>
     );
