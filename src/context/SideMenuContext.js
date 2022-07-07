@@ -2,7 +2,12 @@ import React from 'react';
 
 const SideMenuContext = React.createContext({
     showMenu: true,
-    setShowMenu: () => {}
+    setShowMenu: () => { }
 });
 
-export default SideMenuContext;
+const SelectedOptionContext = React.createContext({
+    selected: 'Home',
+    setSelected: () => { }
+})
+
+export { SideMenuContext, SelectedOptionContext} ;
