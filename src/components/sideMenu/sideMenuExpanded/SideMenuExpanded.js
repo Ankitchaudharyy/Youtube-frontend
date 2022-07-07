@@ -2,6 +2,7 @@ import React from 'react'
 import { homeOptions, activityOptions, subscriptionOptions, moreOptions, settingOptions } from './menuOptions';
 import SideMenuOption from './SideMenuOption';
 import './styles/SideMenuExpandedStyles.css';
+import CopyrightOutlinedIcon from '@mui/icons-material/CopyrightOutlined';
 
 function mapToJSX(options) {
     return options.map((option, index) => {
@@ -28,6 +29,39 @@ function SideMenuExpanded() {
 
             {mapToJSX(settingOptions)}
             <div> <hr /> </div>
+
+            <div className='lastOptions'>
+                About
+                Press
+                Copyright
+            </div>
+            <div className='lastOptions'>
+                Contact
+                Creators
+                <br />
+                Advertise
+                Developers
+            </div>
+            <br />
+            <div className='lastOptions'>
+                Terms
+                Privacy
+                <br />
+                Policy and Safety
+            </div>
+            <br />
+            <div className='lastOptions'>
+                How Youtube works
+                <br />
+                Test new features
+            </div>
+            <br />
+            <div className='lastOptions'>
+                <span>
+                    <CopyrightOutlinedIcon fontSize="smaller" />
+                    &nbsp; 2022 Google LLC
+                </span>
+            </div>
         </div>
     );
 }

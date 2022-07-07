@@ -10,3 +10,12 @@ h4 {
     margin-left: 10px;
     margin-bottom: 10px;
 }
+
+.lastOptions {
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+span {
+    color: gray;
+}
