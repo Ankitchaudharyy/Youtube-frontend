@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+}
+
+.mainBody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+}
+
+body {
+    overflow: hidden;
+}

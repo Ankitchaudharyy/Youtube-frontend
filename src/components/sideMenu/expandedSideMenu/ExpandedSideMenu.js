@@ -15,21 +15,21 @@ function ExpandedSideMenu() {
     return (
         <div className='sideMenu'>
             {mapToJSX(homeOptions)}
-            <div> <hr /> </div>
+            <div> <hr className="smallLine" /> </div>
 
             {mapToJSX(activityOptions)}
-            <div> <hr /> </div>
+            <div> <hr className="smallLine" /> </div>
 
             <h4 > SUBSCRIPTIONS </h4>
             {mapToJSX(subscriptionOptions)}
-            <div> <hr /> </div>
+            <div> <hr className="smallLine" /> </div>
 
             <h4> MORE FROM YOUTUBE </h4>
             {mapToJSX(moreOptions)}
-            <div> <hr /> </div>
+            <div> <hr className="smallLine" /> </div>
 
             {mapToJSX(settingOptions)}
-            <div> <hr /> </div>
+            <div> <hr className="smallLine" /> </div>
 
             <div className='lastOptions'>
                 About
