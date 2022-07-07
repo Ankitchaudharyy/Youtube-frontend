@@ -10,8 +10,8 @@ function Logo() {
     return (
         <div className='logo'>
             <DensityMediumIcon className="menuIcon" onClick={() => setShowMenu(!showMenu)}/>
-            <Tooltip title="Youtube Home" placement="bottom-start">
-                <img src='/yt_logo.png' height='50px' />
+            <Tooltip title="Youtube Home" placement="bottom-end">
+                <img src='/yt_logo.png' height='50px'  alt="logo"/>
             </Tooltip>
         </div>
     );
