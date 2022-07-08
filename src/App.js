@@ -14,7 +14,7 @@ function App() {
         <Header />
       </ShowMenuContext.Provider>
       <div className="container">
-        <SideMenu showMenu={showMenu} />
+        <SideMenu showMenu={showMenu} /> 
         <div className="mainBody">
           <FilterBar />
         </div>

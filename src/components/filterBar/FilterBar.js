@@ -14,11 +14,13 @@ function FilterBar() {
   return (
     <div className='filterBar'>
       <hr />
-      {
-        filters.map((filter, index) => {
-          return <span key={index} > {filter} </span>
-        })
-      }
+      <div className='filterWords'>
+        {
+          filters.map((filter, index) => {
+            return <button className='filterButton' key={index} > {filter} </button>
+          })
+        }
+      </div>
       <hr />
     </div>
   )

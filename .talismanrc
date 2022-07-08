@@ -6,4 +6,4 @@ fileignoreconfig:
 - filename: src/components/sideMenu/expandedSideMenu/ExpandedSideMenu.js
   checksum: f49c5ae7f57537b2007adeb700268f338b4ab317f48a3545ae3953fe6fa71e02
 - filename: src/components/filterBar/FilterBar.js
-  checksum: b3892bb0a486d9ea627fb3f756e8a9baa198121f00e0177440c6c9643b8af56d
+  checksum: e93ac2b424545de1dc21db7cc668a39cd2febb5de7a41bd96cfc98c92c0eabe7
