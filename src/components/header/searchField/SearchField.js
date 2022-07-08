@@ -7,7 +7,7 @@ import Tooltip from '@mui/material/Tooltip';
 function SearchField() {
     return (
         <div className="searchField">
-            <input type="text" placeholder="Search" className="searchBox" />
+            <input type="search" placeholder="Search" className="searchBox" />
             <Tooltip title="Search" placement="bottom-start">
                 <SearchIcon className='searchIcon' />
             </Tooltip>
