@@ -1,8 +1,9 @@
 fileignoreconfig:
 - filename: package-lock.json
-  checksum: 5df411385b7ec8fa9c67081b038db5c64cf01f92b6280118879103987b6d4200
+  checksum: f02b9288cc40e11b88a4687bac3f18707baa8a8876037b8cae8aa87cce83355f
 - filename: src/components/sideMenu/collapsedSideMenu/CollapsedSideMenu.js
   checksum: a71ed2ce8f19e2b36501de6f816634f5866d621206f41a507b7641120159f66a
 - filename: src/components/sideMenu/expandedSideMenu/ExpandedSideMenu.js
   checksum: f49c5ae7f57537b2007adeb700268f338b4ab317f48a3545ae3953fe6fa71e02
-version: ""
+- filename: src/components/filterBar/FilterBar.js
+  checksum: b3892bb0a486d9ea627fb3f756e8a9baa198121f00e0177440c6c9643b8af56d
