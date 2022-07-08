@@ -19,7 +19,7 @@ hr {
     cursor: pointer;
 }
 
-.filterButton:hover {
+.filterButton:not(.selectedFilter):hover {
     background-color: rgb(211, 211, 211, 0.7);
 }
 
@@ -40,4 +40,10 @@ hr {
 
 .filterWords::-webkit-scrollbar{
     display: none;
-  }
+}
+
+.selectedFilter {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
