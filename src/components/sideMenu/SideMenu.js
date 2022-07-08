@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { SelectedOptionContext } from '../../context/SideMenuContext';
 import CollapsedSideMenu from './collapsedSideMenu/CollapsedSideMenu';
 import ExpandedSideMenu from './expandedSideMenu/ExpandedSideMenu';
+import './styles/SideMenuStyles.css'
 
 function SideMenu({ showMenu }) {
 
@@ -9,11 +10,13 @@ function SideMenu({ showMenu }) {
 
     return (
         <SelectedOptionContext.Provider value={{ selected, setSelected }}>
-            {showMenu ?
-                <ExpandedSideMenu />
-                :
-                <CollapsedSideMenu />
-            }
+            <div className='sideMenu'>
+                {showMenu ?
+                    <ExpandedSideMenu />
+                    :
+                    <CollapsedSideMenu />
+                }
+            </div>
         </SelectedOptionContext.Provider>
     );
 

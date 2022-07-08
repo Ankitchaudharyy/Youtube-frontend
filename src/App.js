@@ -12,13 +12,13 @@ function App() {
     <div>
       <ShowMenuContext.Provider value={{ showMenu, setShowMenu }} >
         <Header />
-      </ShowMenuContext.Provider>
-      <div className="container">
-        <SideMenu showMenu={showMenu} /> 
-        <div className="mainBody">
-          <FilterBar />
+        <div className="container">
+          <SideMenu showMenu={showMenu} />
+          <div className="mainBody">
+            <FilterBar />
+          </div>
         </div>
-      </div>
+      </ShowMenuContext.Provider>
     </div>
   );
 }

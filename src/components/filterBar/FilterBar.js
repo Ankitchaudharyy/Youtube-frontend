@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './styles/FilterBarStyles.css'
 import generateFilters from './services/FilterService';
+import { ShowMenuContext } from '../../context/SideMenuContext';
 
 function FilterBar() {
 
   const [filters, setFilters] = useState([]);
+
+  const { showMenu, } = useContext(ShowMenuContext);
 
   useEffect(() => {
     const generatedFilters = generateFilters();
@@ -13,15 +16,15 @@ function FilterBar() {
 
   return (
     <div className='filterBar'>
-      <hr />
-      <div className='filterWords'>
+      <hr className='line'/>
+      <div className={`filterWords `.concat(showMenu ? 'filterWordsCollapsed' : 'filterWordsExpanded')}>
         {
           filters.map((filter, index) => {
             return <button className='filterButton' key={index} > {filter} </button>
           })
         }
       </div>
-      <hr />
+      <hr className='line'/>
     </div>
   )
 }

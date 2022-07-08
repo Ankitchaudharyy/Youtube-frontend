@@ -23,13 +23,21 @@ hr {
     background-color: rgb(211, 211, 211, 0.7);
 }
 
-.filterWords {
+.filterWordsCollapsed {
     width: calc(100vw - 210px);
+}
+
+.filterWordsExpanded {
+    width: calc(100vw - 60px);
+}
+
+.filterWords {
     overflow-x: scroll;
     display: flex;
     box-sizing: border-box;
+    padding-right: 30px;
 }
 
-.filterWords::-webkit-scrollbar {
+.filterWords::-webkit-scrollbar{
     display: none;
   }

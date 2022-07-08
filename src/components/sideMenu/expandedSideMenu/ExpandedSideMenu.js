@@ -13,7 +13,7 @@ function ExpandedSideMenu() {
     }
 
     return (
-        <div className='sideMenu'>
+        <div className='expandedSideMenu'>
             {mapToJSX(homeOptions)}
             <div> <hr className="smallLine" /> </div>
 
