@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/IconMenuStyles.css';
+import styles from './styles/IconMenuStyles.module.css';
 import VideoCallOutlinedIcon from '@mui/icons-material/VideoCallOutlined';
 import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
@@ -8,7 +8,7 @@ import Tooltip from '@mui/material/Tooltip';
 
 function IconMenu() {
     return (
-        <div className='iconMenu'>
+        <div className={styles.iconMenu}>
             <Tooltip title="Create" placement="bottom-start">
                 <VideoCallOutlinedIcon fontSize="large" sx={{ stroke: "#ffffff", strokeWidth: 1 }} className="icon" />
             </Tooltip>
