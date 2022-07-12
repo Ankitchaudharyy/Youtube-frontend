@@ -1,0 +1,21 @@
+.home {
+    display: flex;
+    height: max-content;
+    overflow-y: scroll;
+    margin-top: 70px;
+    padding-top: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content:space-evenly;
+    background-color: rgb(211, 211, 211, 0.2);
+}
+
+.expandedHomePage {
+    width: calc(100vw - 50px);
+}
+
+.collapsedHomePage {
+    width: calc(100vw - 210px);
+
+}

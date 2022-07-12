@@ -1,0 +1,42 @@
+.card {
+    width: 350px;
+    height: 250px;
+    border-radius: 0%;
+    background-color: rgb(211, 211, 211, 0.1);
+}
+
+@media only screen and (max-width:1000px) {
+    .card {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .card {
+        width: 350px;
+    }
+}
+
+.channelLogo {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: inline;
+}
+
+.videoTitle {
+    display: flex;
+}
+
+.title {
+    margin-left: 12px;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.channelName {
+    margin-top: 7px;
+    color: grey;
+    font-weight: lighter;
+    font-size: small;
+}
