@@ -18,7 +18,6 @@ function App() {
     }
   }
   
-
   useEffect(() => {
     window.addEventListener('resize', preventResizing)
 
@@ -35,7 +34,7 @@ function App() {
           <FilterContext.Provider value={[filter, setFilter]}>
             <div className={styles.mainBody}>
               <FilterBar />
-              <Home />
+              <Home/>
             </div>
           </FilterContext.Provider>
         </div>
