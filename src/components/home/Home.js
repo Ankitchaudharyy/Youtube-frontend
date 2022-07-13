@@ -11,7 +11,7 @@ function Home() {
     const [filter] = useContext(FilterContext)
 
     useEffect(() => {
-        fetchVideos(filter == "All" ? "random" : filter)
+        fetchVideos(filter === "All" ? "random" : filter)
             .then(response => {
                 setVideosData(getVideoDetails(response.data.items))
             }).catch(err => {
