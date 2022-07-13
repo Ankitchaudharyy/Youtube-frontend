@@ -1,6 +1,6 @@
 fileignoreconfig:
 - filename: package-lock.json
-  checksum: 8bb3b1fb4f39cd8e9cbf840d139d6ae1ff7645aded868775b2c6d4012d73c0ae
+  checksum: b415c8805481163157cd6fcb9dbdd6eff15a206f57d30e188df317cda2fdd79b
 - filename: src/components/sideMenu/collapsedSideMenu/CollapsedSideMenu.js
   checksum: a71ed2ce8f19e2b36501de6f816634f5866d621206f41a507b7641120159f66a
 - filename: src/components/sideMenu/expandedSideMenu/ExpandedSideMenu.js
@@ -9,3 +9,5 @@ fileignoreconfig:
   checksum: e93ac2b424545de1dc21db7cc668a39cd2febb5de7a41bd96cfc98c92c0eabe7
 - filename: src/services/SearchVideoService.js
   checksum: e3276fc4558f7562c307901b8c82786d4e3c9fafddad65b74aa44e7921720c1a
+- filename: src/components/home/Home.js
+  checksum: 2387a3d17d3ecd562e93754d7161f6a006fc9ffdfeb3b33059fc324f7eeade7b
