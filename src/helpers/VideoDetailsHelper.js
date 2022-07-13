@@ -6,7 +6,7 @@ const getVideoDetails = (videosData) => {
         return {
             title: video.snippet.title,
             channelTitle: video.snippet.channelTitle,
-            thumbnailUrl: video.snippet.thumbnails.medium.url,
+            thumbnailUrl: video.snippet.thumbnails.high.url,
             views: randomViews(),
             publishedAt: dateDifference(video.snippet.publishedAt)
         }

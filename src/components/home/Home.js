@@ -6,7 +6,6 @@ import { fetchVideos } from '../../services/SearchVideoService';
 import {getVideoDetails} from './../../helpers/VideoDetailsHelper';
 
 function Home() {
-
         const [videosData, setVideosData] = useState([]);
 
         useEffect(() => {

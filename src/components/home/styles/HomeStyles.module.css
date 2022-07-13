@@ -8,7 +8,8 @@
     flex-wrap: wrap;
     max-width: 100%;
     justify-content:space-evenly;
-    background-color: rgb(211, 211, 211, 0.2);
+    background-color: rgb(211, 211, 211, 0.1);
+    padding-bottom: 50px;
 }
 
 .expandedHomePage {
