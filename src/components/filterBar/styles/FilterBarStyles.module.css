@@ -1,7 +1,7 @@
 .filterBar {
-    position: fixed;
+    position: sticky;
     height: 50px;
-    margin-top: -6px;
+    margin-top: -8px;
 }
 
 hr {

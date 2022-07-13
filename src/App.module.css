@@ -9,6 +9,7 @@
     height: 100vh;
     overflow: scroll;
     margin-top: -4px;
+    overflow: hidden;
 }
 
 body {
