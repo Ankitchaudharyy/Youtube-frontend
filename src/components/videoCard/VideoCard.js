@@ -71,7 +71,7 @@ function VideoCard({ video }) {
                         </div>
                     </div>
                     <div className={styles.threeDotsIcon}>
-                        <MoreVertOutlinedIcon />
+                        <MoreVertOutlinedIcon fontSize="medium" sx={{ stroke: "#ffffff" }}/>
                     </div>
                 </div>
             </CardContent>
