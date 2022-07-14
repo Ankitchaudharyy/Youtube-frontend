@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router';
 function VideoCard({ video }) {
     let navigate = useNavigate();
 
-    const navigateToVideoPlayer = () => navigate(`/video/${video.id}`)
+    const navigateToVideoPlayer = () => navigate(`/video/${video.id}`,{state:{views : video.views, publishedWhen : video.publishedAt}})
     
     return (
         <Card
@@ -69,7 +69,7 @@ function VideoCard({ video }) {
                                 </Tooltip>
                                 {video.views} views
                                 &nbsp; &bull; &nbsp;
-                                {video.publishedAt}
+                                {video.publishedWhen}
                             </div>
                         </div>
                     </div>
