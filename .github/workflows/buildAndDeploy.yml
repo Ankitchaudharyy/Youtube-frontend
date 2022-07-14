@@ -9,6 +9,7 @@ on:
 
 env:
     REACT_APP_YOUTUBE_API_KEY: ${{ secrets.REACT_APP_YOUTUBE_API_KEY }}
+    PUBLIC_URL: Youtube-frontend
 
 jobs:
     build:
