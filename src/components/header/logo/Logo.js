@@ -11,7 +11,7 @@ function Logo() {
         <div className='logo'>
             <DensityMediumIcon className="menuIcon" onClick={() => setShowMenu(!showMenu)} />
             <Tooltip title="Youtube Home" placement="bottom-end">
-                <img src='/yt_logo.png' height='50px' alt="logo" />
+                <img src={process.env.PUBLIC_URL + '/yt_logo.png'} height='50px' alt="logo" />
             </Tooltip>
         </div>
     );
