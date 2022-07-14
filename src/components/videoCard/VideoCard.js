@@ -51,15 +51,12 @@ function VideoCard({ video }) {
                                 title={video.title}
                                 placement="bottom-start"
                             >
-                                <div className={styles.videoTitle} >
+                                <div className={styles.videoTitle}>
                                     {video.title}
                                 </div>
                             </Tooltip>
                             <div className={styles.channelName}>
-                                <Tooltip
-                                    title={video.channelTitle}
-                                    placement="bottom-start"
-                                >
+                                <Tooltip title={video.channelTitle} placement="bottom-start">
                                     <div style={{ marginBottom: "5px" }}>
                                         {video.channelTitle}
                                     </div>
@@ -71,7 +68,7 @@ function VideoCard({ video }) {
                         </div>
                     </div>
                     <div className={styles.threeDotsIcon}>
-                        <MoreVertOutlinedIcon fontSize="medium" sx={{ stroke: "#ffffff" }}/>
+                        <MoreVertOutlinedIcon fontSize="medium" sx={{ stroke: "#ffffff" }} />
                     </div>
                 </div>
             </CardContent>

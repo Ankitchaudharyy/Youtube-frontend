@@ -2,10 +2,11 @@ import Header from './components/header/Header';
 import { useState, useEffect } from 'react';
 import { ShowMenuContext } from './context/SideMenuContext';
 import SideMenu from './components/sideMenu/SideMenu';
-import FilterBar from './components/filterBar/FilterBar';
 import styles from './App.module.css';
 import { FilterContext } from './context/FilterBarContext';
 import Home from './components/home/Home';
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import VideoPlayer from './components/videoPlayer/VideoPlayer';
 
 function App() {
   const [showMenu, setShowMenu] = useState(true);
@@ -17,12 +18,12 @@ function App() {
       event.stopImmediatePropagation();
     }
   }
-  
+
   useEffect(() => {
     window.addEventListener('resize', preventResizing)
 
     return () => window.removeEventListener('resize', preventResizing)
-    
+
   }, [])
 
   return (
@@ -31,14 +32,19 @@ function App() {
         <Header />
         <div className={styles.container}>
           <SideMenu showMenu={showMenu} />
+
           <FilterContext.Provider value={[filter, setFilter]}>
-            <div className={styles.mainBody}>
-              <FilterBar />
-              <Home/>
-            </div>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/Youtube-frontend" element={<Home />}>
+                </Route>
+                <Route path="/video" element={<VideoPlayer />} />
+              </Routes>
+            </BrowserRouter>
           </FilterContext.Provider>
         </div>
       </ShowMenuContext.Provider>
+
     </div>
   );
 }
