@@ -38,7 +38,8 @@ function App() {
               <Routes>
                 <Route path="/Youtube-frontend" element={<Home />}>
                 </Route>
-                <Route path="/video" element={<VideoPlayer />} />
+                <Route path="/video/:videoId" element={<VideoPlayer />} >
+                  </Route>
               </Routes>
             </BrowserRouter>
           </FilterContext.Provider>

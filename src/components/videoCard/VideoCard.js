@@ -4,8 +4,13 @@ import CardMedia from '@mui/material/CardMedia';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import styles from './styles/VideoCardStyles.module.css';
 import { Tooltip } from '@mui/material';
+import { useNavigate } from 'react-router';
 
 function VideoCard({ video }) {
+    let navigate = useNavigate();
+
+    const navigateToVideoPlayer = () => navigate(`/video/${video.id}`)
+    
     return (
         <Card
             style={{
@@ -16,6 +21,7 @@ function VideoCard({ video }) {
                 backgroundColor: "rgb(211, 211, 211, 0.1)"
             }}
             className={styles.card}
+            onClick={navigateToVideoPlayer}
         >
             <CardMedia
                 style={{

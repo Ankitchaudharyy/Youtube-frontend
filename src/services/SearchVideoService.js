@@ -6,7 +6,7 @@ const youtubeSearch = axios.create({
     baseURL: 'https://www.googleapis.com/youtube/v3/',
     params: {
         part: 'snippet',
-        maxResults: 24,
+        maxResults: 50,
         key: KEY
     }
 })

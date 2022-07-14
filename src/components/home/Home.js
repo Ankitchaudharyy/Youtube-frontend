@@ -11,8 +11,6 @@ function Home() {
     const [videosData, setVideosData] = useState([]);
     const [filter] = useContext(FilterContext)
 
-    console.log("first")
-
     useEffect(() => {
         fetchVideos(filter === "All" ? "random" : filter)
             .then(response => {

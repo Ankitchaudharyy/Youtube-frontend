@@ -4,9 +4,10 @@ import CollapsedSideMenu from './collapsedSideMenu/CollapsedSideMenu';
 import ExpandedSideMenu from './expandedSideMenu/ExpandedSideMenu';
 import './styles/SideMenuStyles.css'
 
-function SideMenu({ showMenu }) {
-
+const SideMenu = ({ showMenu }) => {
     const [selected, setSelected] = useState("Home");
+
+    const pathname = window.location.pathname;
 
     return (
         <SelectedOptionContext.Provider value={{ selected, setSelected }}>
@@ -14,12 +15,12 @@ function SideMenu({ showMenu }) {
                 {showMenu ?
                     <ExpandedSideMenu />
                     :
-                    <CollapsedSideMenu />
+                    pathname.includes('/video/') ?
+                        null : <CollapsedSideMenu /> 
                 }
             </div>
         </SelectedOptionContext.Provider>
     );
-
 }
 
 export default SideMenu
