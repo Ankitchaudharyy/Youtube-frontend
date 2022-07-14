@@ -6,12 +6,15 @@ import { ShowMenuContext } from '../../../context/SideMenuContext';
 
 function Logo() {
     const { showMenu, setShowMenu } = useContext(ShowMenuContext)
+
+    const navigateToHomePage = () => window.location.href = '/Youtube-frontend'
     
     return (
         <div className='logo'>
             <DensityMediumIcon className="menuIcon" onClick={() => setShowMenu(!showMenu)} />
             <Tooltip title="Youtube Home" placement="bottom-end">
-                <img src={process.env.PUBLIC_URL + '/yt_logo.png'} height='50px' alt="logo" />
+                <img src={process.env.PUBLIC_URL + '/yt_logo.png'} height='50px' alt="logo" onClick={navigateToHomePage}/>
+                
             </Tooltip>
         </div>
     );
