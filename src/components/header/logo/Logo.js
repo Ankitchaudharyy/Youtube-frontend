@@ -6,7 +6,8 @@ import { ShowMenuContext } from '../../../context/SideMenuContext';
 
 function Logo() {
     const { showMenu, setShowMenu } = useContext(ShowMenuContext)
-
+    console.log(process.env.PUBLIC_URL);
+    
     return (
         <div className='logo'>
             <DensityMediumIcon className="menuIcon" onClick={() => setShowMenu(!showMenu)} />
