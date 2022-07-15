@@ -14,8 +14,6 @@ function VideoPlayer() {
 
     useEffect(() => setShowMenu(false), [setShowMenu])
 
-    console.log(videoId)
-
     return (
         <div className={styles.videoPlayer}>
             <div className={styles.videoHolder}>
@@ -42,7 +40,7 @@ function VideoPlayer() {
                     <div><VideoActions /> </div>
                 </div>
             </div>
-            <VideoSuggestions />
+            <VideoSuggestions videoDetails={videoDetails}/>
         </div>
     )
 }

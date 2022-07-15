@@ -6,7 +6,6 @@ const getVideoDetails = (videosData) => {
         return video.id.videoId !== undefined
     })
         .map(video => {
-            console.log(formatDateInMMDDYY(video.snippet.publishedAt))
             return {
                 title: video.snippet.title,
                 channelTitle: video.snippet.channelTitle,
