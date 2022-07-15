@@ -9,8 +9,8 @@ import { useNavigate } from 'react-router';
 function VideoCard({ video }) {
     let navigate = useNavigate();
 
-    const navigateToVideoPlayer = () => navigate(`/video/${video.id}`,{state:{views : video.views, publishedWhen : video.publishedAt}})
-    
+    const navigateToVideoPlayer = () => navigate(`/video/${video.id}`, { state: { video: video } })
+
     return (
         <Card
             style={{

@@ -1,7 +1,8 @@
 .suggestions {
     width: 27%;
     margin: 0% 1% 0% 5px;
-    height: 100%;
+    height: 2000px;
+    background-color: aqua;
 }
 
 @media only screen and (max-width : 1200px) {

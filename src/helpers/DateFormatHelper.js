@@ -9,5 +9,5 @@ function dateDifference(startingDate) {
 function formatDateInMMDDYY(date) {
     return moment(date).format('MMMM DD, YYYY');
 }
-
+  
 export { dateDifference, formatDateInMMDDYY }
