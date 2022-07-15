@@ -11,3 +11,5 @@ fileignoreconfig:
   checksum: e3276fc4558f7562c307901b8c82786d4e3c9fafddad65b74aa44e7921720c1a
 - filename: src/components/home/Home.js
   checksum: 26ea0ced0fe1bd4d5e5f09e9a33e434f2c3a43eda1cdff0afbeb2932a83f77ea
+- filename: src/components/videoPlayer/VideoActions/VideoActions.js
+  checksum: a5339bb07f82a126486cd2826ec6b68dc656e721c11a7550338fbd07becfd0c8

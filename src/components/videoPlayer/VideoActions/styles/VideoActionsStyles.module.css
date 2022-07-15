@@ -1,0 +1,37 @@
+.videoActions {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    margin-right: -10px;
+}
+
+.iconName {
+    text-align: center;
+    font-size: medium;
+    margin: 0px 5px;
+}
+
+.videoActionItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 2%;
+}
+
+
+@media only screen and (max-width : 1250px) {
+    .videoActions {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (max-width : 306px) {
+    .videoActionItem {
+        flex-wrap: wrap;
+    }
+
+
+}

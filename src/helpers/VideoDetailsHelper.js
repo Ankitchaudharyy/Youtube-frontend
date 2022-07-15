@@ -1,4 +1,4 @@
-import { randomViews } from './ViewsGeneratorHelper';
+import { randomViews } from './RandomNumbersHelper';
 import { dateDifference , formatDateInMMDDYY } from './DateFormatHelper';
 
 const getVideoDetails = (videosData) => {
