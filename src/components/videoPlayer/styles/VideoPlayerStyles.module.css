@@ -1,0 +1,20 @@
+.videoPlayer {
+    padding: 10px 5px 10px 2%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ytPlayer {
+    width: 70%;
+    height: 70%;
+}
+
+@media only screen and (max-width : 1200px) {
+    .ytPlayer {
+        width: 100%;
+        margin: 10px 2%;
+    }
+}
