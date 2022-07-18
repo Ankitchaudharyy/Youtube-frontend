@@ -1,6 +1,5 @@
 import React from 'react';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import EmojiFlagsIcon from '@mui/icons-material/EmojiFlags';
 import { actionIcons } from './ActionIcons';
 import styles from './styles/VideoActionsStyles.module.css'
 
