@@ -2,48 +2,60 @@ import React, { useState, useEffect } from 'react'
 import styles from './styles/VideoSuggestionsStyles.module.css';
 import { fetchVideos } from '../../services/SearchVideoService';
 import { getVideoDetails } from '../../helpers/VideoDetailsHelper';
-import VideoDetails from './../videoDetails/VideoDetails';
 import { Tooltip } from '@mui/material';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
+import { useNavigate } from 'react-router';
 
 function VideoSuggestions({ videoDetails }) {
-    const [videoSuggestions, setVideoSuggestions] = useState([1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 5, 55, 5, 5, 5]);
+    let navigate = useNavigate();
 
-    // useEffect(() => {
-    //     const getVideos = async (word) => {
-    //         await fetchVideos(word)
-    //             .then(response => {
-    //                 setVideoSuggestions([...videoSuggestions, ...getVideoDetails(response.data.items)])
-    //             }).catch(err => {
-    //                 console.log(err);
-    //             })
-    //     }
-    //     const words = videoDetails.title.split(" ").slice(0, 3);
+    const navigateToVideoPlayer = (video) => navigate(`/video/${video.id}`, { state: { video: video } })
 
-    //     console.log(words);
+    const [videoSuggestions, setVideoSuggestions] = useState([]);
 
-    //     for (var index = 0; index < 3; index++) {
-    //         getVideos(words[index]);
-    //     }
-    //     // eslint-disable-next-line 
-    // }, [])
+    useEffect(() => {
+        const getVideos = async (word) => {
+            await fetchVideos(word)
+                .then(response => {
+                    setVideoSuggestions([...videoSuggestions, ...getVideoDetails(response.data.items)])
+                }).catch(err => {
+                    console.log(err);
+                })
+        }
+        const words = videoDetails.title.split(" ").slice(0, 3);
+
+        for (var index = 0; index < 3; index++) {
+            getVideos(words[index]);
+        }
+        // eslint-disable-next-line 
+    }, [])
 
     return (
         <div className={styles.suggestions}>
             {
                 videoSuggestions.map((video, index) => {
-                    return <div key={index} className={styles.videoSuggestionCard}>
-                        <img src={process.env.PUBLIC_URL + `/pic.jpeg`} className={styles.Thumbnail} alt="Thumbnail" onClick={() => alert('fffffgfdc')} />
+                    return <div
+                        key={index}
+                        className={styles.videoSuggestionCard}
+                        onClick={() => navigateToVideoPlayer(video)}
+                    >
+                        <img
+                            src={video.thumbnailUrl}
+                            className={styles.Thumbnail}
+                            alt="Thumbnail"
+                        />
                         <div className={styles.videoDetails}>
                             <Tooltip
                                 title={videoDetails.title}
                                 placement="bottom-end">
                                 <div className={styles.videoTitle}>
-                                    {videoDetails.title}
+                                    {video.title}
                                 </div>
                             </Tooltip>
                             <div className={styles.channelName}>
-                                <Tooltip title={video.channelTitle} placement="bottom-start">
+                                <Tooltip
+                                    title={video.channelTitle}
+                                    placement="bottom-start">
                                     <div style={{ marginBottom: "5px" }}>
                                         {video.channelTitle}
                                     </div>

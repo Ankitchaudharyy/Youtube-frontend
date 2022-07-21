@@ -38,7 +38,7 @@ function App() {
               <Routes>
                 <Route path="/Youtube-frontend" element={<Home />}>
                 </Route>
-                <Route path="/video/:videoId" element={<VideoPlayer />} >
+                <Route exact refresh="true" path="/video/:videoId" element={<VideoPlayer />} >
                   </Route>
               </Routes>
             </BrowserRouter>
