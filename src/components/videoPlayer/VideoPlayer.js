@@ -39,6 +39,7 @@ function VideoPlayer() {
                     </div>
                     <div><VideoActions /> </div>
                 </div>
+                <hr className={styles.horizontalLine} />
             </div>
             <VideoSuggestions videoDetails={videoDetails} />
         </div>

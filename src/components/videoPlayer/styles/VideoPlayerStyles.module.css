@@ -75,3 +75,7 @@
         text-overflow: ellipsis;
     }
 }
+
+.horizontalLine {
+    border: 1px solid rgb(211, 211, 211, 0.6);
+}

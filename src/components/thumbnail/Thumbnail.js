@@ -1,9 +1,7 @@
 import React from 'react';
 import CardMedia from '@mui/material/CardMedia';
 
-function Thumbnail({ thumbnailUrl }) {
-    console.log(thumbnailUrl);
-    
+function Thumbnail({ thumbnailUrl }) {    
     return (
         <CardMedia
             style={{
