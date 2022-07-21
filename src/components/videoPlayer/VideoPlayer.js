@@ -6,6 +6,7 @@ import VideoSuggestions from '../videoSuggestions/VideoSuggestions';
 import { useLocation } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import VideoActions from './VideoActions/VideoActions';
+import ChannelDetails from '../channelDetails/ChannelDetails';
 
 function VideoPlayer() {
     const { setShowMenu } = useContext(ShowMenuContext);
@@ -40,8 +41,9 @@ function VideoPlayer() {
                     <div><VideoActions /> </div>
                 </div>
                 <hr className={styles.horizontalLine} />
+                <ChannelDetails thumbnailUrl={videoDetails.thumbnailUrl} channelTitle={videoDetails.channelTitle}/>
             </div>
-            <VideoSuggestions videoDetails={videoDetails} />
+            {/* <VideoSuggestions videoDetails={videoDetails} /> */}
         </div>
     )
 }

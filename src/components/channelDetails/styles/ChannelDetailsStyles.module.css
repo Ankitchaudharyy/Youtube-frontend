@@ -1,0 +1,19 @@
+.channelLogo {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: inline;
+    top: 0;
+}
+
+.channelTitle {
+    display: inline;
+    margin-left: 10px;
+    font-size: small;
+}
+
+.channelDetails {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
