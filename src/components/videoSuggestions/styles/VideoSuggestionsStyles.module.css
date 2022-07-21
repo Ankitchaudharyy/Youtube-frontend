@@ -14,16 +14,27 @@
         margin: 15px 1%;
     }
 
+    .videoDetails {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .videoTitle {
+        display: -webkit-box;
+        -webkit-line-clamp: 2; 
+                line-clamp: 2; 
+        -webkit-box-orient: vertical;
+    }
+
     .Thumbnail {
-        max-width: 100px;
-        overflow: hidden;
+        width: 60%;
+        height: 80%;
     }
 }
 
 .videoSuggestionCard {
     display: flex;
     flex-direction: row;
-    /* height: 50%; */
     max-height: 100px;
     margin: 1% 0;
 }
@@ -31,10 +42,68 @@
 .videoDetails {
     width: 60%;
     height: 40%;
-    text-overflow: ellipsis;
+    margin-left: 10px;
 }
 
 .Thumbnail {
-    height: 90%;
-    width: 60%;
+    height: 100%;
+    width: 40%;
+}
+
+.videoTitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+            line-clamp: 2; 
+    -webkit-box-orient: vertical;
+}
+
+.channelName {
+    margin-top: 7px;
+    color: grey;
+    font-weight: lighter;
+    font-size: small;
+}
+
+
+.threeDotsIcon {
+    margin-left: 10px;
+    margin-right: -10px;
+    display: none;
+}
+
+.videoSuggestionCard:hover {
+    cursor: pointer;
+}
+
+.videoSuggestionCard:hover .threeDotsIcon{
+    display: block;
+}
+
+
+@media only screen and (max-width : 900px) {
+    .suggestions {
+        width: 100%;
+        margin: -220px 1%;
+    }
+
+    .videoDetails {
+        width: 60%;
+        margin-right: 0;
+    }
+
+    .videoTitle {
+        display: -webkit-box;
+        -webkit-line-clamp: 2; 
+                line-clamp: 2; 
+        -webkit-box-orient: vertical;
+    }
+
+    .Thumbnail {
+        display: block;
+        top: 0px;
+        width: 50%;
+        height: 100%;
+    }
 }

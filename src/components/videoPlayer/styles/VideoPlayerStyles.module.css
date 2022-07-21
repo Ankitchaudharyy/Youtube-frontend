@@ -47,12 +47,31 @@
 
     .ytPlayer{
         height: 80%;
+        margin-top: -20px;
     }
-}
 
-@media only screen and (max-width : 1250px){
     .fixItLater {
         flex-direction: column;
         justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width : 700px){
+    .videoPlayer {
+        width: 90vw;
+    }
+    
+    .videoHolder {
+        width: 100%;
+        margin: 10px 2%;
+    }
+
+    .ytPlayer{
+        height: 50%;
+        width: 100%;
+    }
+
+    .videoTitle {
+        text-overflow: ellipsis;
     }
 }

@@ -48,10 +48,12 @@
     }
 }
 
-@media only screen and (max-width : 306px) {
+@media only screen and (max-width : 600px) {
+    .videoActions {
+        display: none;
+    }
+
     .videoActionItem {
         flex-wrap: wrap;
     }
-
-
 }

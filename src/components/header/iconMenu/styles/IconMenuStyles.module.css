@@ -4,6 +4,12 @@
 }
 
 .icon {
-    margin: 0 3px;
+    margin: 0 1%;
     cursor: pointer;
+}
+
+@media only screen and (max-width : 900px) {
+    .iconMenu {
+        display: none;
+    }
 }
