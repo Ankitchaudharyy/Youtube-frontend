@@ -2,25 +2,29 @@ import React from 'react';
 import { Tooltip } from '@mui/material';
 import styles from './styles/VideoDetailsStyles.module.css';
 
-function VideoDetails({ video }) {
+function VideoDetails({ video, hideChannelLogo }) {
+
     return (
         <div className={styles.videoDetails}>
-            <Tooltip
-                title={video.channelTitle}
-                placement="bottom-start"
-            >
-                <img
-                    src={video.thumbnailUrl}
-                    alt="logo"
-                    style={{
-                        marginLeft: "-10px",
-                        borderRadius: "50% 50% 50% 50%",
-                        height: "20px",
-                        width: "20px"
-                    }}
-                    className={styles.channelLogo}
-                />
-            </Tooltip>
+            {
+                hideChannelLogo !== true &&
+                <Tooltip
+                    title={video.channelTitle}
+                    placement="bottom-start"
+                >
+                    <img
+                        src={video.thumbnailUrl}
+                        alt="logo"
+                        style={{
+                            marginLeft: "-10px",
+                            borderRadius: "50% 50% 50% 50%",
+                            height: "20px",
+                            width: "20px"
+                        }}
+                        className={styles.channelLogo}
+                    />
+                </Tooltip>
+            }
             <div className={styles.videoMetaData}>
                 <Tooltip
                     title={video.title}
@@ -43,6 +47,10 @@ function VideoDetails({ video }) {
             </div>
         </div>
     )
+}
+
+VideoDetails.defaultProps = {
+    hideChannelLogo: false
 }
 
 export default VideoDetails

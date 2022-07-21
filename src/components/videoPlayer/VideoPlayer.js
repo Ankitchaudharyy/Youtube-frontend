@@ -40,7 +40,7 @@ function VideoPlayer() {
                     <div><VideoActions /> </div>
                 </div>
             </div>
-            <VideoSuggestions videoTitle={videoDetails.title} />
+            <VideoSuggestions videoDetails={videoDetails} />
         </div>
     )
 }

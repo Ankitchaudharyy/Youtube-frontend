@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import styles from './styles/VideoSuggestionsStyles.module.css';
-import Thumbnail from '../thumbnail/Thumbnail';
 import { fetchVideos } from '../../services/SearchVideoService';
 import { getVideoDetails } from '../../helpers/VideoDetailsHelper';
+import VideoDetails from './../videoDetails/VideoDetails';
 
-function VideoSuggestions({ videoTitle }) {
+function VideoSuggestions({ videoDetails }) {
     const [videoSuggestions, setVideoSuggestions] = useState([]);
 
     useEffect(() => {
@@ -16,19 +16,25 @@ function VideoSuggestions({ videoTitle }) {
                     console.log(err);
                 })
         }
+        const words = videoDetails.title.split(" ").slice(0, 3);
 
-        const words = videoTitle.split(" ").slice(0, 3);
+        console.log(words);
 
         for (var index = 0; index < 3; index++) {
             getVideos(words[index]);
         }
+        // eslint-disable-next-line 
     }, [])
 
     return (
         <div className={styles.suggestions}>
             {
                 videoSuggestions.map((video, index) => {
-                    return <Thumbnail thumbnailUrl={video.thumbnailUrl} />
+                    return <div key={index} className={styles.videoSuggestionCard}>
+                        <img src={video.thumbnailUrl} className={styles.Thumbnail} alt="Thumbnail" />
+                        <div className={styles.videoDetails}>
+                        </div>
+                    </div>
                 })
             }
         </div>

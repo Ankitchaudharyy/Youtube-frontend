@@ -1,15 +1,40 @@
 .suggestions {
-    width: 27%;
-    margin: 0% 1% 0% 5px;
-    height: 2000px;
+    width: 32%;
+    margin: 0% 1% 20% 5px;
     background-color: white;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    justify-content: flex-start;
 }
 
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 1250px) {
     .suggestions {
         width: 100%;
-        margin: 10px 2%;
+        margin: 15px 1%;
     }
+
+    .Thumbnail {
+        max-width: 100px;
+        overflow: hidden;
+    }
+}
+
+.videoSuggestionCard {
+    display: flex;
+    flex-direction: row;
+    /* height: 50%; */
+    max-height: 100px;
+    margin: 1% 0;
+}
+
+.videoDetails {
+    width: 60%;
+    height: 40%;
+    text-overflow: ellipsis;
+}
+
+.Thumbnail {
+    height: 90%;
+    width: 60%;
 }
