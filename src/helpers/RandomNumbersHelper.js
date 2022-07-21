@@ -1,13 +1,18 @@
 const max = 100;
 const min = 1;
 
-const randomViews = () => {
-    return (Math.floor(Math.random() * (max - min)) + min) + 'K';
+const randomNumberGenerator = () => {
+    return (Math.floor(Math.random() * (max - min)) + min);
 }
 
-const randomLikes = randomViews;
+const randomLikes = () => randomNumberGenerator() + 'K';
+
+const randomViews = randomLikes;
+
+const randomSubscribers = () => randomNumberGenerator() + 'M';
 
 export {
     randomViews,
-    randomLikes
+    randomLikes,
+    randomSubscribers
 }

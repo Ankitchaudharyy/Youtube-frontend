@@ -8,7 +8,6 @@
 
 .channelTitle {
     display: inline;
-    margin-left: 10px;
     font-size: small;
 }
 
@@ -16,4 +15,28 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.channelSubscribers {
+    font-size: smaller;
+    font-weight: lighter;
+    color: grey;
+}
+
+.textDetails {
+    margin-left: 10px;
+}
+
+.subscribeBtn {
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    padding: 8px 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.channelDetailsBar {
+    display: flex;
+    justify-content: space-between;
 }
