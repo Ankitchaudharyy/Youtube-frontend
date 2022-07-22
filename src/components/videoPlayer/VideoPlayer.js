@@ -46,7 +46,7 @@ function VideoPlayer() {
                     {videoDetails.description}
                 </div>
             </div>
-            {/* <VideoSuggestions videoDetails={videoDetails} /> */}
+            <VideoSuggestions videoDetails={videoDetails} />
         </div>
     )
 }
