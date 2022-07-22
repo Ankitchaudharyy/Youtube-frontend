@@ -13,7 +13,8 @@ const getVideoDetails = (videosData) => {
                 id: video.id.videoId,
                 views: randomViews(),
                 publishedWhen: dateDifference(video.snippet.publishedAt),
-                publishedDate: formatDateInMMDDYY(video.snippet.publishedAt)
+                publishedDate: formatDateInMMDDYY(video.snippet.publishedAt),
+                description : video.snippet.description
             }
         })
         .slice(0, 24)

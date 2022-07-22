@@ -80,3 +80,10 @@
     border: 1px solid rgb(211, 211, 211, 0.6);
     margin: 15px 0px;
 }
+
+.videoDescription {
+    margin-top: 10px;
+    font-size: smaller;
+    margin-left: 50px;
+    width: 60%;
+}

@@ -42,8 +42,11 @@ function VideoPlayer() {
                 </div>
                 <hr className={styles.horizontalLine} />
                 <ChannelDetails thumbnailUrl={videoDetails.thumbnailUrl} channelTitle={videoDetails.channelTitle}/>
+                <div className={styles.videoDescription}>
+                    {videoDetails.description}
+                </div>
             </div>
-            <VideoSuggestions videoDetails={videoDetails} />
+            {/* <VideoSuggestions videoDetails={videoDetails} /> */}
         </div>
     )
 }
