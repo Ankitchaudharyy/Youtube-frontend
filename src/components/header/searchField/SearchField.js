@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './styles/SearchFieldStyles.css';
 import SearchIcon from '@mui/icons-material/Search';
 import MicIcon from '@mui/icons-material/Mic';
 import Tooltip from '@mui/material/Tooltip';
 
 function SearchField() {
+
+    const inputRef = useRef('');
+
+    const showSearchResults = () => {
+        const inputValue = inputRef.current.value;
+
+        if(inputValue !== '') {
+            window.location.href = "/search";
+        }
+    }
+
     return (
         <div className="searchField">
-            <input type="search" placeholder="Search" className="searchBox" />
+            <input type="search" placeholder="Search" className="searchBox" ref={inputRef}/>
             <Tooltip title="Search" placement="bottom-start">
-                <SearchIcon className='searchIcon' />
+                <SearchIcon className='searchIcon' onClick={() => showSearchResults()} />
             </Tooltip>
             <Tooltip title="Search with your voice" placement="bottom-start">
                 <MicIcon className='micIcon' />

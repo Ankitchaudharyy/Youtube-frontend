@@ -7,47 +7,49 @@ import { FilterContext } from './context/FilterBarContext';
 import Home from './components/home/Home';
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import VideoPlayer from './components/videoPlayer/VideoPlayer';
+import SearchResults from './components/searchResults/SearchResults';
 
 function App() {
-  const [showMenu, setShowMenu] = useState(true);
-  const [filter, setFilter] = useState('All');
+	const [showMenu, setShowMenu] = useState(true);
+	const [filter, setFilter] = useState('All');
 
-  const preventResizing = (event) => {
-    if (window.innerWidth < 1000) {
-      setShowMenu(false);
-      event.stopImmediatePropagation();
-    }
-  }
+	const preventResizing = (event) => {
+		if (window.innerWidth < 1000) {
+			setShowMenu(false);
+			event.stopImmediatePropagation();
+		}
+	}
 
-  useEffect(() => {
-    window.addEventListener('resize', preventResizing)
+	useEffect(() => {
+		window.addEventListener('resize', preventResizing)
 
-    return () => window.removeEventListener('resize', preventResizing)
+		return () => window.removeEventListener('resize', preventResizing)
 
-  }, [])
+	}, [])
 
-  return (
-    <div>
-      <ShowMenuContext.Provider value={{ showMenu, setShowMenu }} >
-        <Header />
-        <div className={styles.container}>
-          <SideMenu showMenu={showMenu} />
+	return (
+		<div>
+			<ShowMenuContext.Provider value={{ showMenu, setShowMenu }} >
+				<Header />
+				<div className={styles.container}>
+					<SideMenu showMenu={showMenu} />
 
-          <FilterContext.Provider value={[filter, setFilter]}>
-            <BrowserRouter>
-              <Routes>
-                <Route path="/Youtube-frontend" element={<Home />}>
-                </Route>
-                <Route exact refresh="true" path="/video/:videoId" element={<VideoPlayer />} >
-                  </Route>
-              </Routes>
-            </BrowserRouter>
-          </FilterContext.Provider>
-        </div>
-      </ShowMenuContext.Provider>
+					<FilterContext.Provider value={[filter, setFilter]}>
+						<BrowserRouter>
+							<Routes>
+								<Route path="/Youtube-frontend" element={<Home />}>
+								</Route>
+								<Route exact refresh="true" path="/video/:videoId" element={<VideoPlayer />} >
+								</Route>
+								<Route exact path='/search' element={<SearchResults />}></Route>
+							</Routes>
+						</BrowserRouter>
+					</FilterContext.Provider>
+				</div>
+			</ShowMenuContext.Provider>
 
-    </div>
-  );
+		</div>
+	);
 }
 
 export default App;
