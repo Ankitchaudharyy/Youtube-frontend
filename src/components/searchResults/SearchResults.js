@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router';
 import { fetchVideos } from './../../services/SearchVideoService';
-import { getVideoDetails } from './../../helpers/VideoDetailsHelper'
+import { getSearchDetails } from './../../helpers/SearchResultsHelper'
 
 function SearchResults() {
 	const searchText = useLocation().state.searchText;
 
-	const [searchResults, setSearchResults] = useState([]);
+	const [searchResults, setSearchResults] = useState({videos : [], channels : []});
 
 	useEffect(() => {
 		fetchVideos(searchText)
 			.then(response => {
-				setSearchResults(getVideoDetails(response.data.items))
+				setSearchResults(getSearchDetails(response.data.items))
 			}).catch(err => {
 				console.log(err);
 			})
@@ -20,7 +20,15 @@ function SearchResults() {
 	return (
 		<div>
 			{
-				searchResults.map((searchResult, index) => {
+				searchResults.channels.map((searchResult, index) => {
+					return <div key={index}>
+						{searchResult.title}
+					</div>
+				})
+			}
+			<h1>Break</h1>
+			{
+				searchResults.videos.map((searchResult, index) => {
 					return <div key={index}>
 						{searchResult.title}
 					</div>
