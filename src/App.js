@@ -28,14 +28,12 @@ function App() {
 	}, [])
 
 	return (
-		<div>
+		<BrowserRouter>
 			<ShowMenuContext.Provider value={{ showMenu, setShowMenu }} >
 				<Header />
 				<div className={styles.container}>
 					<SideMenu showMenu={showMenu} />
-
 					<FilterContext.Provider value={[filter, setFilter]}>
-						<BrowserRouter>
 							<Routes>
 								<Route path="/Youtube-frontend" element={<Home />}>
 								</Route>
@@ -43,12 +41,10 @@ function App() {
 								</Route>
 								<Route exact path='/search' element={<SearchResults />}></Route>
 							</Routes>
-						</BrowserRouter>
 					</FilterContext.Provider>
 				</div>
 			</ShowMenuContext.Provider>
-
-		</div>
+		</BrowserRouter>
 	);
 }
 

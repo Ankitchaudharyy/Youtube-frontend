@@ -3,16 +3,17 @@ import './styles/SearchFieldStyles.css';
 import SearchIcon from '@mui/icons-material/Search';
 import MicIcon from '@mui/icons-material/Mic';
 import Tooltip from '@mui/material/Tooltip';
+import { useNavigate } from 'react-router';
 
 function SearchField() {
-
+    let navigate = useNavigate();
     const inputRef = useRef('');
 
     const showSearchResults = () => {
         const inputValue = inputRef.current.value;
 
         if(inputValue !== '') {
-            window.location.href = "/search";
+            navigate('/search', {state: {searchText: inputValue}})
         }
     }
 
