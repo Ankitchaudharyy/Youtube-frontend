@@ -2,10 +2,10 @@ import React from 'react';
 import { Tooltip } from '@mui/material';
 import styles from './styles/VideoDetailsStyles.module.css';
 
-function VideoDetails({ video, hideChannelLogo }) {
+function VideoDetails({ video, hideChannelLogo , width}) {
 
     return (
-        <div className={styles.videoDetails}>
+        <div className={styles.videoDetails} style={{width : {width}}}>
             {
                 hideChannelLogo !== true &&
                 <Tooltip

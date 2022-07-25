@@ -4,6 +4,7 @@ import { fetchVideos } from './../../services/SearchVideoService';
 import { getSearchDetails } from './../../helpers/SearchResultsHelper';
 import ChannelResult from './channelResult/ChannelResult';
 import styles from './styles/SearchResultsStyles.module.css';
+import VideoResult from './videoResult/VideoResult';
 
 
 function SearchResults() {
@@ -25,8 +26,13 @@ function SearchResults() {
 			<div className={styles.searchResults}>
 				{
 					searchResults.channels.map((searchResult, index) => {
-						console.log(searchResult);
 						return <ChannelResult key={index} channelDetails={searchResult} />
+					})
+				}
+				<hr className={styles.horizontalDivision}/>
+				{
+					searchResults.videos.map((video,index)=>{
+						return <VideoResult key={index} videoDetails={video} />
 					})
 				}
 			</div>

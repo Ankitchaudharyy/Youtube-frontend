@@ -1,14 +1,14 @@
 import React from 'react';
 import CardMedia from '@mui/material/CardMedia';
 
-function Thumbnail({ thumbnailUrl }) {    
+function Thumbnail({ thumbnailUrl , height}) {    
     return (
         <CardMedia
             style={{
                 marginLeft: "-12px"
             }}
             component="img"
-            height="70%"
+            height={height}
             width="100%"
             image={thumbnailUrl}
             alt="green iguana"

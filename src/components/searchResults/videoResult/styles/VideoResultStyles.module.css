@@ -1,0 +1,28 @@
+.videoResult {
+    display: flex;
+    margin-top: 45px;
+}
+
+.thumbnail {
+    width: 350px;
+    height: 200px;
+    margin: -20px 5px;
+}
+
+.videoDetails {
+    width: 60%;
+}
+
+@media only screen and (max-width : 800px) {
+    .videoDetails {
+        width: 50%;
+    }
+
+    .videoResult {
+        margin: 0px 10px;
+    }
+
+    .thumbnail {
+        margin: 0 5px;
+    }
+}

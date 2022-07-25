@@ -24,10 +24,10 @@ function VideoCard({ video }) {
             className={styles.card}
             onClick={navigateToVideoPlayer}
         >
-            <Thumbnail thumbnailUrl={video.thumbnailUrl} />
+            <Thumbnail thumbnailUrl={video.thumbnailUrl} height="70%"/>
             <CardContent>
                 <div className={styles.cardContent}>
-                    <VideoDetails video={video} />
+                    <VideoDetails video={video} width='300px'/>
                     <div className={styles.threeDotsIcon}>
                         <MoreVertOutlinedIcon fontSize="medium" sx={{ stroke: "#ffffff" }} />
                     </div>

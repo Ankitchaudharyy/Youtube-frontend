@@ -18,7 +18,6 @@
 
 .videoDetails {
     display: flex;
-    width: 300px;
     margin-right: 40px;
     flex-direction: row;
 }
