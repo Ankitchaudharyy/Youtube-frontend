@@ -15,3 +15,5 @@ fileignoreconfig:
   checksum: a5339bb07f82a126486cd2826ec6b68dc656e721c11a7550338fbd07becfd0c8
 - filename: src/components/videoSuggestions/VideoSuggestions.js
   checksum: 92af5d822fd516c6257ce7ae73e733c7115cb55373ccebed7306247d7365f925
+- filename: src/components/searchResults/SearchResults.js
+  checksum: 2100ab9786b31f4efc19d3691dedf53e70b172515470813c5ee614c9923c7213
