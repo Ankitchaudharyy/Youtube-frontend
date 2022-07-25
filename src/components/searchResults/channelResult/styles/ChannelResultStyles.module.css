@@ -1,0 +1,10 @@
+.channelResult {
+    display: flex;
+    flex-direction: row;
+}
+
+.thumbnail {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+}

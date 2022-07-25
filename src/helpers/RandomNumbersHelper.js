@@ -11,7 +11,7 @@ const randomViews = randomLikes;
 
 const randomSubscribers = () => randomNumberGenerator() + 'M';
 
-const randomVideos = () => randomNumberGenerator * 543;
+const randomVideos = () => randomNumberGenerator() * 543;
 
 export {
     randomViews,

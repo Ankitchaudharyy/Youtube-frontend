@@ -1,0 +1,10 @@
+.searchResults {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.search {
+    height: auto;
+    width: auto;
+    background-color: rgb(211, 211, 211, 0.1);
+}
