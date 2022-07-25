@@ -1,19 +1,12 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import Typography from '@mui/material/Typography';
 import styles from './styles/ChannelDetailsStyles.module.css';
 import { randomSubscribers } from '../../helpers/RandomNumbersHelper';
+import SubscribeButton from '../subscribeButton/SubscribeButton';
 
 function ChannelDetails({ thumbnailUrl, channelTitle }) {
 
-    const subscribeBtn = useRef(null);
-
-    const onSubscribe = () => {
-        subscribeBtn.current.style.backgroundColor = "rgb(211, 211, 211, 0.5)";
-        subscribeBtn.current.style.color = "gray";
-        subscribeBtn.current.style.border = "1px solid rgb(211, 211, 211, 0.5)";
-        subscribeBtn.current.innerHTML = "SUBSCRIBED";
-        subscribeBtn.current.style.cursor = "default";
-    };
+    
 
     return (
         <div className={styles.channelDetailsBar}>
@@ -28,9 +21,7 @@ function ChannelDetails({ thumbnailUrl, channelTitle }) {
                     </Typography>
                 </div>
             </div>
-            <button className={styles.subscribeBtn} ref={subscribeBtn} onClick={onSubscribe}>
-                SUBSCRIBE
-            </button>
+            <SubscribeButton />
         </div>
     )
 }

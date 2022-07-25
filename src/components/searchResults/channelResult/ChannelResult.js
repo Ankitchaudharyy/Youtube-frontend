@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './styles/ChannelResultStyles.module.css'
 import { Avatar } from '@mui/material';
 import Typography from '@mui/material/Typography';
+import SubscribeButton from '../../subscribeButton/SubscribeButton';
 
 
 function ChannelResult({ channelDetails }) {
@@ -16,15 +17,18 @@ function ChannelResult({ channelDetails }) {
                 />
             </div>
             <div className={styles.textDetails}>
-                    <Typography variant="h6" gutterBottom component="div" className={styles.channelTitle} >
-                        {channelDetails.title}
-                    </Typography>
-                    <Typography variant="h7" gutterBottom component="div" className={styles.channelSubscribers} >
-                        {channelDetails.subscribers} subscribers &nbsp; &bull; &nbsp; {channelDetails.videos} videos
-                    </Typography>
-                    <Typography variant="h7" gutterBottom component="div" className={styles.channelDescription} >
-                        {channelDetails.description}
-                    </Typography>
+                <Typography variant="h6" gutterBottom component="div" className={styles.channelTitle} >
+                    {channelDetails.title}
+                </Typography>
+                <Typography variant="h7" gutterBottom component="div" className={styles.channelSubscribers} >
+                    {channelDetails.subscribers} subscribers &nbsp; &bull; &nbsp; {channelDetails.videos} videos
+                </Typography>
+                <Typography variant="h7" gutterBottom component="div" className={styles.channelDescription} >
+                    {channelDetails.description}
+                </Typography>
+            </div>
+            <div className={styles.subscribeBtn}>
+                <SubscribeButton />
             </div>
         </div>
     )
