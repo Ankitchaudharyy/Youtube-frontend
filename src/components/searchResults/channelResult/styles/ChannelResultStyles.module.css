@@ -4,7 +4,29 @@
 }
 
 .thumbnail {
-    width: 300px;
+    width: 450px;
     height: 200px;
     text-align: center;
+}
+
+.channelTitle {
+    margin-bottom: 50px;
+}
+
+.channelDescription {
+    font-size: smaller;
+    font-weight: lighter;
+    color: grey;
+}
+
+.channelSubscribers {
+    font-size: smaller;
+    font-weight: lighter;
+    color: grey;
+}
+
+.textDetails {
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
