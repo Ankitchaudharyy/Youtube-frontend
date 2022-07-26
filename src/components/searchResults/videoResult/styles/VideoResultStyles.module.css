@@ -14,6 +14,14 @@
     width: 60%;
 }
 
+.threeDotsIcon {
+    display: none;
+}
+
+.videoResult:hover .threeDotsIcon {
+    display: block;
+}
+
 @media only screen and (max-width : 800px) {
     .videoDetails {
         width: 50%;
@@ -37,11 +45,16 @@
         width: 35%;
         height: 150px;
     }
+
+    .threeDotsIcon {
+        margin-right: -5%;
+    }
 }
 
 @media only screen and (max-width : 550px) {
     .videoDetails {
-        width: 40%;
+        width: 35%;
+        margin-right: -30px;
     }
 
     .thumbnail {
@@ -50,6 +63,10 @@
     }
 
     .videoResult {
-        margin: 0px 10px;
+        margin: 0px 0px;
+    }
+
+    .threeDotsIcon {
+        margin-left: 0px;
     }
 }
