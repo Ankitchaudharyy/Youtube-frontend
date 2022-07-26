@@ -17,9 +17,15 @@ function SearchField() {
         }
     }
 
+    const handleKeyPress = (event) => {
+        if (event.key == "Enter") {
+            showSearchResults();
+        }
+    }
+
     return (
         <div className="searchField">
-            <input type="search" placeholder="Search" className="searchBox" ref={inputRef}/>
+            <input type="search" placeholder="Search" className="searchBox" ref={inputRef} onKeyPress={handleKeyPress} />
             <Tooltip title="Search" placement="bottom-start">
                 <SearchIcon className='searchIcon' onClick={() => showSearchResults()} />
             </Tooltip>

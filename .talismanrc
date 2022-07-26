@@ -17,3 +17,5 @@ fileignoreconfig:
   checksum: 92af5d822fd516c6257ce7ae73e733c7115cb55373ccebed7306247d7365f925
 - filename: src/components/searchResults/SearchResults.js
   checksum: 0fa2c109dbe2d98be6f3068035b52b10dbfcae2690f4ce455e21721ad8834420
+- filename: src/components/header/searchField/SearchField.js
+  checksum: 8af1596deb35202ba8e32597cbd81a2223ae54cb34cd6bba64506b309b3ca31a
