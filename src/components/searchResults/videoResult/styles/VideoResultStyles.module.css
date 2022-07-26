@@ -26,3 +26,29 @@
         margin: 0 5px;
     }
 }
+
+@media only screen and (max-width : 650px) {
+    .videoDetails {
+        width: 50%;
+    }
+
+    .thumbnail {
+        width: 35%;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width : 550px) {
+    .videoDetails {
+        width: 40%;
+    }
+
+    .thumbnail {
+        width: 30%;
+        height: 150px;
+    }
+
+    .videoResult {
+        margin: 0px 10px;
+    }
+}

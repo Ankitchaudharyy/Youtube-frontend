@@ -2,29 +2,27 @@ import React from 'react';
 import { Tooltip } from '@mui/material';
 import styles from './styles/VideoDetailsStyles.module.css';
 
-function VideoDetails({ video, hideChannelLogo , width}) {
+function VideoDetails({ video, hideDescription, width }) {
 
     return (
-        <div className={styles.videoDetails} style={{width : {width}}}>
-            {
-                hideChannelLogo !== true &&
-                <Tooltip
-                    title={video.channelTitle}
-                    placement="bottom-start"
-                >
-                    <img
-                        src={video.thumbnailUrl}
-                        alt="logo"
-                        style={{
-                            marginLeft: "-10px",
-                            borderRadius: "50% 50% 50% 50%",
-                            height: "20px",
-                            width: "20px"
-                        }}
-                        className={styles.channelLogo}
-                    />
-                </Tooltip>
-            }
+        <div className={styles.videoDetails} style={{ width: { width } }}>
+            <Tooltip
+                title={video.channelTitle}
+                placement="bottom-start"
+            >
+                <img
+                    src={video.thumbnailUrl}
+                    alt="logo"
+                    style={{
+                        marginLeft: "-10px",
+                        borderRadius: "50% 50% 50% 50%",
+                        height: "20px",
+                        width: "20px"
+                    }}
+                    className={styles.channelLogo}
+                />
+            </Tooltip>
+
             <div className={styles.videoMetaData}>
                 <Tooltip
                     title={video.title}
@@ -44,13 +42,19 @@ function VideoDetails({ video, hideChannelLogo , width}) {
                     &nbsp; &bull; &nbsp;
                     {video.publishedWhen}
                 </div>
+                {
+                    hideDescription &&
+                    <div className={styles.videoDescription}>
+                        {video.description}
+                    </div>
+                }
             </div>
         </div>
     )
 }
 
 VideoDetails.defaultProps = {
-    hideChannelLogo: false
+    hideDescription: false
 }
 
 export default VideoDetails

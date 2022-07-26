@@ -38,21 +38,37 @@
 }
 
 @media only screen and (max-width:800px) {
-    .subscribeBtn {
+    .thumbnail {
         display: none;
     }
 
     .textDetails {
-        width: 45%;
+        margin-left: 50px;
+        width: 50%;
     }
 
+    .channelResult {
+        margin-bottom: 15px;
+        justify-content: flex-start;
+    }
+
+    .subscribeBtn {
+        margin-right: -50px;
+    }
+}
+
+
+@media only screen and (max-width:570px) {
     .thumbnail {
-        width: 100px; 
-        position: fixed;   
-        right:50px;    
+        display: none;
     }
 
-    .avatar {
-        position: block;
+    .textDetails {
+        margin-left: 60px;
+        width: 30%;
+    }
+
+    .channelResult {
+        margin-bottom: 15px;
     }
 }

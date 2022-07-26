@@ -10,7 +10,7 @@ function VideoResult({ videoDetails }) {
                 <Thumbnail thumbnailUrl={videoDetails.thumbnailUrl} height="90%" />
             </div>
             <div className={styles.videoDetails}>
-                <VideoDetails video={videoDetails} hideChanelLogo={false} width="60%" />
+                <VideoDetails video={videoDetails} hideDescription={true} width="60%" />
             </div>
         </div>
     )
