@@ -1,6 +1,7 @@
 .videoResult {
     display: flex;
     margin-top: 45px;
+    cursor: pointer;
 }
 
 .thumbnail {
