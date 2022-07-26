@@ -40,15 +40,26 @@
     visibility: visible;
 }
 
+@media only screen and (max-width : 1300px) and (min-width : 1250px){
+    .videoActions{
+        margin-right: 130px;
+    }
+}
 
-@media only screen and (max-width : 1250px) {
+
+@media only screen and (max-width : 1300px) {
     .videoActions {
         width: 100%;
         margin-top: 15px;
     }
+
+    .iconName {
+        font-size: small;
+    }
+   
 }
 
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 650px) {
     .videoActions {
         display: none;
     }

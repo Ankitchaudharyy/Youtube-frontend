@@ -12,6 +12,7 @@
     .suggestions {
         width: 100%;
         margin: 15px 1%;
+        margin-bottom: 100px;
     }
 
     .videoDetails {
@@ -85,7 +86,7 @@
 @media only screen and (max-width : 900px) {
     .suggestions {
         width: 100%;
-        margin: -220px 1%;
+        margin: 10px 1%;
     }
 
     .videoDetails {
