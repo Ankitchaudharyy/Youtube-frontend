@@ -7,8 +7,6 @@ fileignoreconfig:
   checksum: f49c5ae7f57537b2007adeb700268f338b4ab317f48a3545ae3953fe6fa71e02
 - filename: src/components/filterBar/FilterBar.js
   checksum: e93ac2b424545de1dc21db7cc668a39cd2febb5de7a41bd96cfc98c92c0eabe7
-- filename: src/services/SearchVideoService.js
-  checksum: e3276fc4558f7562c307901b8c82786d4e3c9fafddad65b74aa44e7921720c1a
 - filename: src/components/home/Home.js
   checksum: 26ea0ced0fe1bd4d5e5f09e9a33e434f2c3a43eda1cdff0afbeb2932a83f77ea
 - filename: src/components/videoPlayer/VideoActions/VideoActions.js
@@ -19,3 +17,5 @@ fileignoreconfig:
   checksum: 0fa2c109dbe2d98be6f3068035b52b10dbfcae2690f4ce455e21721ad8834420
 - filename: src/components/header/searchField/SearchField.js
   checksum: 8c2a7580b82f99753333414d1d4c8e34dfa47eddaa54bad9556ddaf55541fb33
+- filename: src/services/YoutubeAPIService.js
+  checksum: 811841c5bf3cb91913848a3920a021b54b3cd4d09f1da6c563b2f5ef96f5d550

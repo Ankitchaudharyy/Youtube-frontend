@@ -1,18 +1,7 @@
-import axios from 'axios';
-
-const KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
-
-const youtubeSearch = axios.create({
-    baseURL: 'https://www.googleapis.com/youtube/v3/',
-    params: {
-        part: 'snippet',
-        maxResults: 50,
-        key: KEY
-    }
-})
+import { youtubeAPI } from "./YoutubeAPIService";
 
 const fetchVideos = async (searchText) => {
-    const response = await youtubeSearch.get('/search', {
+    const response = await youtubeAPI.get('/search', {
         params: {
             q: searchText
         }
