@@ -7,7 +7,7 @@ const getCommentDetails = (commentsData) => {
             authorName: comment.snippet.topLevelComment.snippet.authorDisplayName,
             authorProfileImageURL: comment.snippet.topLevelComment.snippet.authorProfileImageUrl,
             publishedWhen: dateDifference(comment.snippet.topLevelComment.snippet.publishedAt),
-            commentText: comment.snippet.topLevelComment.snippet.textDisplay,
+            text: comment.snippet.topLevelComment.snippet.textDisplay,
             likes: comment.snippet.topLevelComment.snippet.likeCount
         }
     })

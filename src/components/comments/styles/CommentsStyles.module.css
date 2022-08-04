@@ -1,0 +1,48 @@
+.commentSection{
+    display: block;
+}
+
+.comment {
+    display: flex;
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+.authorProfileImage {
+    margin-right: 20px;
+}
+
+.authorName {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.commentData {
+    width: 90%
+}
+
+.publishedWhen {
+    margin-left: 10px;
+    color: rgb(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+.commentText {
+    font-size: 15px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+            line-clamp: 4; 
+    -webkit-box-orient: vertical;
+}
+
+.threeDotsIcon {
+    display: none;
+}
+
+.comment:hover .threeDotsIcon {
+    display: block;
+}

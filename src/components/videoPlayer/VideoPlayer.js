@@ -7,8 +7,7 @@ import { useLocation } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import VideoActions from './VideoActions/VideoActions';
 import ChannelDetails from '../channelDetails/ChannelDetails';
-import { extractComments } from './../../services/ExtractCommentService';
-import { getCommentDetails } from '../../helpers/CommentDetailsHelper';
+import Comments from '../comments/Comments';
 
 function VideoPlayer() {
     const { setShowMenu } = useContext(ShowMenuContext);
@@ -16,16 +15,6 @@ function VideoPlayer() {
     const videoDetails = useLocation().state.video;
 
     useEffect(() => setShowMenu(false), [setShowMenu])
-
-    useEffect(() => {
-        extractComments('cXoC2OeLlvQ')
-            .then(response => {
-                console.log(getCommentDetails(response.data.items));
-            })
-            .catch(err => {
-                console.log(err);
-            })
-    }, [])
 
     return (
         <div className={styles.videoPlayer}>
@@ -53,10 +42,12 @@ function VideoPlayer() {
                     <div><VideoActions /> </div>
                 </div>
                 <hr className={styles.horizontalLine} />
-                <ChannelDetails thumbnailUrl={videoDetails.thumbnailUrl} channelTitle={videoDetails.channelTitle} />
+                <ChannelDetails thumbnailUrl={videoDetails.thumbnailUrl} channelTitle={videoDetails.channelTitle}/>
                 <div className={styles.videoDescription}>
                     {videoDetails.description}
                 </div>
+                <hr className={styles.horizontalLine} />
+                <Comments />
             </div>
             <VideoSuggestions videoDetails={videoDetails} />
         </div>

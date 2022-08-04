@@ -11,13 +11,13 @@
     align-items: center;
 }
 
-img {
+.logoImage {
     cursor: pointer;
     padding-left: 11px;
 }
 
 @media only screen and (max-width : 800px) {
-    img {
+    .logoImage {
         display: none;
     }
 }
