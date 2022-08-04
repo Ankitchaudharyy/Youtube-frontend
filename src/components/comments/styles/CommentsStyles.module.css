@@ -6,6 +6,7 @@
     display: flex;
     margin: 10px 0;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .authorProfileImage {
@@ -19,7 +20,7 @@
 }
 
 .commentData {
-    width: 90%
+    width: 90%;
 }
 
 .publishedWhen {
@@ -31,12 +32,12 @@
 .commentText {
     font-size: 15px;
     font-weight: 500;
-    overflow: hidden;
+    /* overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 4; 
             line-clamp: 4; 
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: vertical; */
 }
 
 .threeDotsIcon {
@@ -45,4 +46,16 @@
 
 .comment:hover .threeDotsIcon {
     display: block;
+}
+
+.commentActions {
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0, 0.5);
+    font-size: smaller;
+    margin-top: 10px;
+}
+
+.commentActions > * {
+    margin-right: 15px;
 }

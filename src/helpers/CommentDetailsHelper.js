@@ -8,7 +8,8 @@ const getCommentDetails = (commentsData) => {
             authorProfileImageURL: comment.snippet.topLevelComment.snippet.authorProfileImageUrl,
             publishedWhen: dateDifference(comment.snippet.topLevelComment.snippet.publishedAt),
             text: comment.snippet.topLevelComment.snippet.textDisplay,
-            likes: comment.snippet.topLevelComment.snippet.likeCount
+            likes: comment.snippet.topLevelComment.snippet.likeCount,
+            liked: false
         }
     })
 }
