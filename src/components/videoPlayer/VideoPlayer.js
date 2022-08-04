@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import VideoActions from './VideoActions/VideoActions';
 import ChannelDetails from '../channelDetails/ChannelDetails';
 import { extractComments } from './../../services/ExtractCommentService';
+import { getCommentDetails } from '../../helpers/CommentDetailsHelper';
 
 function VideoPlayer() {
     const { setShowMenu } = useContext(ShowMenuContext);
@@ -19,9 +20,9 @@ function VideoPlayer() {
     useEffect(() => {
         extractComments('cXoC2OeLlvQ')
             .then(response => {
-                console.log(response)
-            }).
-            catch(err => {
+                console.log(getCommentDetails(response.data.items));
+            })
+            .catch(err => {
                 console.log(err);
             })
     }, [])
