@@ -1,5 +1,5 @@
 import Header from './components/header/Header';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ShowMenuContext } from './context/SideMenuContext';
 import SideMenu from './components/sideMenu/SideMenu';
 import styles from './App.module.css';
@@ -13,20 +13,6 @@ function App() {
 	const [showMenu, setShowMenu] = useState(true);
 	const [filter, setFilter] = useState('All');
 
-	const preventResizing = (event) => {
-		if (window.innerWidth < 1000) {
-			setShowMenu(false);
-			event.stopImmediatePropagation();
-		}
-	}
-
-	useEffect(() => {
-		window.addEventListener('resize', preventResizing)
-
-		return () => window.removeEventListener('resize', preventResizing)
-
-	}, [])
-
 	return (
 		<BrowserRouter>
 			<ShowMenuContext.Provider value={{ showMenu, setShowMenu }} >
@@ -34,6 +20,7 @@ function App() {
 				<div className={styles.container}>
 					<SideMenu showMenu={showMenu} />
 					<FilterContext.Provider value={[filter, setFilter]}>
+						<div className={showMenu === true && styles.blurBody} >
 							<Routes>
 								<Route path="/Youtube-frontend" element={<Home />}>
 								</Route>
@@ -41,10 +28,11 @@ function App() {
 								</Route>
 								<Route exact path='/search' element={<SearchResults />}></Route>
 							</Routes>
+						</div>
 					</FilterContext.Provider>
 				</div>
-			</ShowMenuContext.Provider>
-		</BrowserRouter>
+			</ShowMenuContext.Provider >
+		</BrowserRouter >
 	);
 }
 

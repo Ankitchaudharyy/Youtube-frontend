@@ -5,9 +5,6 @@ import { randomSubscribers } from '../../helpers/RandomNumbersHelper';
 import SubscribeButton from '../subscribeButton/SubscribeButton';
 
 function ChannelDetails({ thumbnailUrl, channelTitle }) {
-
-    
-
     return (
         <div className={styles.channelDetailsBar}>
             <div className={styles.channelDetails}>

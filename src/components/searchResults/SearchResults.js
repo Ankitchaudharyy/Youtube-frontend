@@ -6,7 +6,6 @@ import ChannelResult from './channelResult/ChannelResult';
 import styles from './styles/SearchResultsStyles.module.css';
 import VideoResult from './videoResult/VideoResult';
 
-
 function SearchResults() {
 	const searchText = useLocation().state.searchText;
 
