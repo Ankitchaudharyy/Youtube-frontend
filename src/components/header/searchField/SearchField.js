@@ -5,6 +5,8 @@ import MicIcon from '@mui/icons-material/Mic';
 import Tooltip from '@mui/material/Tooltip';
 import { useNavigate } from 'react-router';
 import SpeechToTextModal from './speechToTextModal/SpeechToTextModal';
+import SpeechRecognition from 'react-speech-recognition';
+
 
 function SearchField() {
     let navigate = useNavigate();
@@ -12,8 +14,20 @@ function SearchField() {
 
     const [openSpeechToText, setOpenSpeechToText] = useState(false);
 
-    const handleOpen = () => setOpenSpeechToText(true);
-    const handleClose = () => setOpenSpeechToText(false);
+    const handleOpen = () => {
+        setOpenSpeechToText(true);
+        SpeechRecognition.startListening();
+    };
+    const handleClose = (transcript) => {
+        setOpenSpeechToText(false);
+        SpeechRecognition.stopListening();
+        setInputText(transcript);
+        showSearchResults();
+    }
+
+    const setInputText = (transcript) => {
+        inputRef.current.value = transcript;
+    }
 
     const showSearchResults = () => {
         const inputValue = inputRef.current.value;

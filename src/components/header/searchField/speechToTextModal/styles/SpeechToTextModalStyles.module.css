@@ -18,3 +18,7 @@
     cursor: pointer;
     padding: 5px;
 }
+
+.micOn {
+    background-color: green;
+}
