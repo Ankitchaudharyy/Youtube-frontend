@@ -1,19 +1,25 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import './styles/SearchFieldStyles.css';
 import SearchIcon from '@mui/icons-material/Search';
 import MicIcon from '@mui/icons-material/Mic';
 import Tooltip from '@mui/material/Tooltip';
 import { useNavigate } from 'react-router';
+import SpeechToTextModal from './speechToTextModal/SpeechToTextModal';
 
 function SearchField() {
     let navigate = useNavigate();
     const inputRef = useRef('');
 
+    const [openSpeechToText, setOpenSpeechToText] = useState(false);
+
+    const handleOpen = () => setOpenSpeechToText(true);
+    const handleClose = () => setOpenSpeechToText(false);
+
     const showSearchResults = () => {
         const inputValue = inputRef.current.value;
 
-        if(inputValue !== '') {
-            navigate('/search', {state: {searchText: inputValue}})
+        if (inputValue !== '') {
+            navigate('/search', { state: { searchText: inputValue } })
         }
     }
 
@@ -30,8 +36,9 @@ function SearchField() {
                 <SearchIcon className='searchIcon' onClick={() => showSearchResults()} />
             </Tooltip>
             <Tooltip title="Search with your voice" placement="bottom-start">
-                <MicIcon className='micIcon' />
+                <MicIcon className='micIcon' onClick={handleOpen} />
             </Tooltip>
+            <SpeechToTextModal open={openSpeechToText} handleClose={handleClose} />
         </div>
     )
 }
