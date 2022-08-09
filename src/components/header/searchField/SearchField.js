@@ -10,18 +10,30 @@ import SpeechRecognition from 'react-speech-recognition';
 
 function SearchField() {
     let navigate = useNavigate();
+    const [speechText, setSpeechText] = useState("Listening...")
     const inputRef = useRef('');
+    const audioRef = useRef('');
+    const interval = useRef('');
 
     const [openSpeechToText, setOpenSpeechToText] = useState(false);
 
     const handleOpen = () => {
         setOpenSpeechToText(true);
         SpeechRecognition.startListening();
+        interval.current = setTimeout(() => {
+            if(audioRef.current.innerHTML!=='')
+                handleClose(audioRef.current.innerHTML);
+            else
+                setSpeechText("Click the mic to speak")
+        }, 7000)
     };
+
     const handleClose = (transcript) => {
+        clearTimeout(interval);
         setOpenSpeechToText(false);
         SpeechRecognition.stopListening();
-        setInputText(transcript);
+        if (transcript !== '')
+            setInputText(transcript);
         showSearchResults();
     }
 
@@ -52,7 +64,7 @@ function SearchField() {
             <Tooltip title="Search with your voice" placement="bottom-start">
                 <MicIcon className='micIcon' onClick={handleOpen} />
             </Tooltip>
-            <SpeechToTextModal open={openSpeechToText} handleClose={handleClose} />
+            <SpeechToTextModal open={openSpeechToText} handleClose={handleClose} ref={audioRef} speechText={speechText}/>
         </div>
     )
 }
