@@ -1,6 +1,9 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import MicIcon from '@mui/icons-material/Mic';
+import styles from './styles/SpeechToTextModalStyles.module.css';
+import CloseIcon from '@mui/icons-material/Close';
 
 const style = {
     position: 'absolute',
@@ -22,11 +25,11 @@ function SpeechToTextModal({ open, handleClose }) {
                 onClose={handleClose}
             >
                 <Box sx={style}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                    <Typography variant="h5" component="h2">
+                        Listening...
                     </Typography>
-                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-
-                    </Typography>
+                    <CloseIcon className={styles.close} onClick={handleClose} />
+                    <MicIcon className={styles.micIcon} />
                 </Box>
             </Modal>
         </div>
