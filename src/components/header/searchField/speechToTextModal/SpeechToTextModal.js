@@ -12,14 +12,14 @@ const style = {
     top: '2%',
     left: '50%',
     transform: 'translate(-50%, 0%)',
-    width: '400px',
-    height: '300px',
+    width: '350px',
+    height: '250px',
     bgcolor: 'background.paper',
     p: 4,
     outline: 0
 };
 
-const SpeechToTextModal = forwardRef(({ open, handleClose , speechText}, ref) => {
+const SpeechToTextModal = forwardRef(({ open, handleClose }, ref) => {
 
     const {
         transcript,
@@ -31,19 +31,26 @@ const SpeechToTextModal = forwardRef(({ open, handleClose , speechText}, ref) =>
         return <span>Browser doesn't support speech recognition.</span>;
     }
 
+    const handleMicClick = () => {
+        if (listening === false)
+            SpeechRecognition.startListening();
+        else
+            SpeechRecognition.stopListening();
+    }
+
     return (
         <div>
             <Modal
                 open={open}
-                onClose={handleClose}
+                onClose={() => handleClose(transcript)}
             >
                 <Box sx={style}>
+                    <CloseIcon className={styles.close} onClick={() => handleClose(transcript)} />
                     <Typography variant="h5" component="h2">
-                        {transcript === '' && speechText}
+                        {transcript === '' ? listening ?  'Listening...' : 'Click on mic to search.' : null}
                         <span ref={ref}>{transcript}</span>
                     </Typography>
-                    <CloseIcon className={styles.close} onClick={() => handleClose(transcript)} />
-                    <MicIcon className={`${styles.micIcon} `.concat(listening ? styles.micOn : styles.micOff)} onClick={SpeechRecognition.startListening} />
+                    <MicIcon className={`${styles.micIcon} `.concat(listening ? styles.micOn : styles.micOff)} onClick={handleMicClick} />
                 </Box>
             </Modal>
         </div>

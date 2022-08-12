@@ -5,20 +5,28 @@
     width: 40px;
     padding: 10px 10px;
     color: white;
-    position: absolute;
     left: 45%;
+    position: absolute;
     bottom: 15%;
+    margin: auto;
+    cursor: pointer;
 }
 
+@keyframes mymove {
+    from {border-width: 0px; left:45%; bottom: 15%;}
+    to {border-width: 20px; left: 40%; bottom: 10%;}
+  }
+
 .close {
-    float: right;
     position: absolute;
-    right: 5%;
-    top: 5%;
+    right: 1%;
+    top:1%;
     cursor: pointer;
     padding: 5px;
 }
 
 .micOn {
-    background-color: green;
+    background-color: red;
+    animation: mymove 1s infinite;
+    border: 9px solid rgb(211, 211, 211, 1);
 }
