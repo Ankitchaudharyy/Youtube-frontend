@@ -48,6 +48,9 @@ function Comments() {
 
     return (
         <div className={styles.commentSection}>
+            <div className={styles.commentsHeading}>
+                30 Comments
+            </div>
             {
                 comments.map((comment, index) => {
                     return <div className={styles.comment}>

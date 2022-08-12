@@ -60,3 +60,8 @@
 .commentActions > * {
     margin-right: 15px;
 }
+
+.commentsHeading {
+    font-size: 20px;
+    margin: 20px 5px;
+}
