@@ -1,7 +1,3 @@
-.commentSection{
-    display: block;
-}
-
 .comment {
     display: flex;
     margin: 10px 0;
@@ -57,11 +53,6 @@
     margin-top: 10px;
 }
 
-.commentActions > * {
+.commentActions>* {
     margin-right: 15px;
-}
-
-.commentsHeading {
-    font-size: 20px;
-    margin: 20px 5px;
 }

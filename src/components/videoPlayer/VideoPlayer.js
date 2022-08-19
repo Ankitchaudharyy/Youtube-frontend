@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import VideoActions from './VideoActions/VideoActions';
 import ChannelDetails from '../channelDetails/ChannelDetails';
-import Comments from '../comments/Comments';
+import CommentSection from '../commentSection/CommentSection';
 
 function VideoPlayer() {
     const { setShowMenu } = useContext(ShowMenuContext);
@@ -47,7 +47,7 @@ function VideoPlayer() {
                     {videoDetails.description}
                 </div>
                 <hr className={styles.horizontalLine} />
-                <Comments />
+                <CommentSection />
             </div>
             <VideoSuggestions videoDetails={videoDetails} />
         </div>

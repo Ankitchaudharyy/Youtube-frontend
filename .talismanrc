@@ -19,3 +19,5 @@ fileignoreconfig:
   checksum: 8c2a7580b82f99753333414d1d4c8e34dfa47eddaa54bad9556ddaf55541fb33
 - filename: src/services/YoutubeAPIService.js
   checksum: 811841c5bf3cb91913848a3920a021b54b3cd4d09f1da6c563b2f5ef96f5d550
+- filename: src/components/commentSection/CommentSection.js
+  checksum: c32f256501aca9a283d110991ff36ffd8d97cb4dfa1da2755a29404c9fc160f8
