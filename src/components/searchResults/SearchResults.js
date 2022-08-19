@@ -28,7 +28,10 @@ function SearchResults() {
 						return <ChannelResult key={index} channelDetails={searchResult} />
 					})
 				}
-				<hr className={styles.horizontalDivision}/>
+				{
+					searchResults.channels.length > 0 &&
+					<hr className={styles.horizontalDivision}/>
+				}
 				{
 					searchResults.videos.map((video,index)=>{
 						return <VideoResult key={index} videoDetails={video} />
