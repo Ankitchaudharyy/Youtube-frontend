@@ -4,20 +4,21 @@ import { actionIcons } from './ActionIcons';
 import styles from './styles/VideoActionsStyles.module.css'
 
 function VideoActions() {
+    
     return (
         <div className={styles.videoActions}>
             {
                 actionIcons.map((actionIcon, index) => {
                     return (
                         <div key={index} className={styles.videoActionItem}>
-                            {actionIcon.outlinedIcon}
+                            {actionIcon.filledIcon}
                             <span className={styles.iconName}> {actionIcon.name} </span>
                             <span className={styles.tooltiptext}> {actionIcon.toolTipText} </span>
                         </div>
                     )
                 })
             }
-            <MoreHorizIcon />
+            <MoreHorizIcon className={styles.moreHorizon}/>
         </div>
     )
 }

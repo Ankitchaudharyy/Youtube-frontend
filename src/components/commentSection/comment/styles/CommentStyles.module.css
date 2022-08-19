@@ -27,7 +27,7 @@
 }
 
 .commentText {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
     /* overflow: hidden;
     text-overflow: ellipsis;
@@ -55,4 +55,11 @@
 
 .commentActions>* {
     margin-right: 15px;
+}
+
+@media screen and (max-width:600px) {
+    .commentData {
+        width: 100%;
+    }
+
 }

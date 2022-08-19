@@ -30,7 +30,7 @@ function VideoPlayer() {
                     className={styles.ytPlayer}
                 >
                 </iframe>
-                <Typography variant="h5" gutterBottom component="div" className={styles.videoTitle}>
+                <Typography gutterBottom component="div" className={styles.videoTitle}>
                     {videoDetails.title}
                 </Typography>
                 <div className={styles.fixItLater}>
