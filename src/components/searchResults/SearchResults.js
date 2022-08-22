@@ -38,6 +38,9 @@ function SearchResults() {
 					})
 				}
 			</div>
+			<div className={styles.emptyDiv}>
+
+			</div>
 		</div>
 
 	)
