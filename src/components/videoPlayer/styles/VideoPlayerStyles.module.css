@@ -1,6 +1,5 @@
 .videoPlayer {
     padding: 10px 5px 10px 2%;
-    width: 95vw;
     height: 100vh;
     overflow-y: scroll;
     display: flex;
@@ -9,6 +8,14 @@
     margin: 25px;
     margin-top: 0px;
     margin-right: 0px;
+}
+
+.expanded{
+    width: 95vw;
+}
+
+.collapsed{
+    width: calc(95vw - 220px);
 }
 
 .ytPlayer {
@@ -62,6 +69,10 @@
         margin: 10px 2%;
         margin-left: 5px;
         padding-left: 2px;
+    }
+
+    .collapsed {
+        margin: 0px 2px;
     }
 
     .ytPlayer{

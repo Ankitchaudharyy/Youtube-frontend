@@ -12,12 +12,13 @@ import CommentSection from '../commentSection/CommentSection';
 function VideoPlayer() {
     const { setShowMenu } = useContext(ShowMenuContext);
     const { videoId } = useParams();
+    const { showMenu } = useContext(ShowMenuContext);
     const videoDetails = useLocation().state.video;
 
     useEffect(() => setShowMenu(false), [setShowMenu])
 
     return (
-        <div className={styles.videoPlayer}>
+        <div className={`${styles.videoPlayer} `.concat(showMenu?styles.collapsed:styles.exxpanded)}>
             <div className={styles.videoHolder}>
                 <iframe
                     id="ytplayer"

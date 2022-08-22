@@ -40,12 +40,12 @@
     visibility: visible;
 }
 
-.moreHorizon{
+.moreHorizon {
     display: inline;
 }
 
-@media only screen and (max-width : 1300px) and (min-width : 1250px){
-    .videoActions{
+@media only screen and (max-width : 1300px) and (min-width : 1250px) {
+    .videoActions {
         margin-right: 130px;
     }
 }
@@ -54,16 +54,18 @@
     .videoActions {
         width: 100%;
         margin-top: 15px;
+        flex-wrap: wrap;
     }
 
-    .moreHorizon{
+    .moreHorizon {
         display: none;
     }
 }
 
 @media only screen and (max-width : 650px) {
     .videoActions {
-        display: none;
+        width: 80%;
+        margin-top: 15px;
     }
 
     .videoActionItem {

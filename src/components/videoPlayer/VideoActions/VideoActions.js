@@ -18,7 +18,7 @@ function VideoActions() {
                     )
                 })
             }
-            <MoreHorizIcon className={styles.moreHorizon}/>
+            {/* <MoreHorizIcon className={styles.moreHorizon}/> */}
         </div>
     )
 }
