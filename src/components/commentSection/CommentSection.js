@@ -3,20 +3,19 @@ import { extractComments } from '../../services/ExtractCommentService';
 import { getCommentDetails } from '../../helpers/CommentDetailsHelper';
 import styles from './styles/CommentSectionStyles.module.css';
 import Comment from './comment/Comment';
-// import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 
-function CommentSection() {
+const CommentSection = React.memo(({ videoId }) => {
     const [comments, setComments] = useState([]);
 
     useEffect(() => {
-        extractComments('cXoC2OeLlvQ')
+        extractComments(videoId)
             .then(response => {
                 setComments(getCommentDetails(response.data.items));
             })
             .catch(err => {
                 console.log(err);
             })
-    }, [])
+    }, [videoId])
 
     const handleLike = (index) => {
         if (comments[index].liked === false) {
@@ -50,11 +49,11 @@ function CommentSection() {
             </div>
             {
                 comments.map((comment, index) => {
-                    return <Comment key={index} comment={comment} handleLike={handleLike} index={index}/>
+                    return <Comment key={index} comment={comment} handleLike={handleLike} index={index} />
                 })
             }
         </div>
     )
-}
+})
 
 export default CommentSection

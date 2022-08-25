@@ -18,7 +18,7 @@ function VideoPlayer() {
     useEffect(() => setShowMenu(false), [setShowMenu])
 
     return (
-        <div className={`${styles.videoPlayer} `.concat(showMenu?styles.collapsed:styles.exxpanded)}>
+        <div className={`${styles.videoPlayer} `.concat(showMenu ? styles.collapsed : styles.exxpanded)}>
             <div className={styles.videoHolder}>
                 <iframe
                     id="ytplayer"
@@ -43,12 +43,12 @@ function VideoPlayer() {
                     <div><VideoActions /> </div>
                 </div>
                 <hr className={styles.horizontalLine} />
-                <ChannelDetails thumbnailUrl={videoDetails.thumbnailUrl} channelTitle={videoDetails.channelTitle}/>
+                <ChannelDetails thumbnailUrl={videoDetails.thumbnailUrl} channelTitle={videoDetails.channelTitle} />
                 <div className={styles.videoDescription}>
                     {videoDetails.description}
                 </div>
                 <hr className={styles.horizontalLine} />
-                <CommentSection />
+                <CommentSection videoId={videoId} />
             </div>
             <VideoSuggestions videoDetails={videoDetails} />
         </div>
